@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://drdl4wbx6falg"]
+
+[ext_resource type="Texture2D" uid="uid://5lfan064dcru" path="res://assets/floor/close-up-concrete-wall-with-crack.jpg" id="1_377w7"]
+[ext_resource type="PackedScene" uid="uid://duim56isk7074" path="res://scenes/player/player.tscn" id="1_bovvr"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bovvr"]
+sky_top_color = Color(0.29538456, 0.32800764, 0.26066843, 1)
+sky_horizon_color = Color(0.5314733, 0.53187907, 0.50604427, 1)
+ground_horizon_color = Color(0.5314733, 0.53187907, 0.50604427, 1)
+
+[sub_resource type="Sky" id="Sky_b2cq8"]
+sky_material = SubResource("ProceduralSkyMaterial_bovvr")
+
+[sub_resource type="Environment" id="Environment_xb4v1"]
+background_mode = 2
+sky = SubResource("Sky_b2cq8")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ftxyw"]
+size = Vector3(15, 0.1, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bovvr"]
+albedo_texture = ExtResource("1_377w7")
+uv1_scale = Vector3(3, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ftxyw"]
+material = SubResource("StandardMaterial3D_bovvr")
+
+[node name="level" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xb4v1")
+
+[node name="player" parent="." instance=ExtResource("1_bovvr")]
+
+[node name="floor" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+shape = SubResource("BoxShape3D_ftxyw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+transform = Transform3D(14.999155, 0, 0.15917104, 0, 0.1, 0, -0.15917104, 0, 14.999155, 0, 0, 0)
+mesh = SubResource("BoxMesh_ftxyw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]

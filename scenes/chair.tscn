@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2jywm01hspq0"]
+
+[ext_resource type="Texture2D" uid="uid://bkyiqocr2md2k" path="res://scenes/levels/materials/brown-wooden-textured-flooring-background.jpg" id="1_i2o7u"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eotx8"]
+albedo_texture = ExtResource("1_i2o7u")
+
+[sub_resource type="BoxMesh" id="BoxMesh_3fp06"]
+material = SubResource("StandardMaterial3D_eotx8")
+
+[node name="Chair" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.75, 0, 0, 0, 0.129, 0, 0, 0, 1.759, 0, 0, 0)
+mesh = SubResource("BoxMesh_3fp06")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.75, 0, 0, 0, -5.638769e-09, -1.759, 0, 0.129, -7.688833e-08, 0, 0.75406736, -1)
+mesh = SubResource("BoxMesh_3fp06")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.23811042, 0, 0, 0, 2.3470685, 0, 0, 0, 0.19501264, -0.6718473, -1.1733193, -0.67579013)
+mesh = SubResource("BoxMesh_3fp06")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.23811042, 0, 0, 0, 2.3470685, 0, 0, 0, 0.19501264, 0.7281529, -1.1733193, -0.57579017)
+mesh = SubResource("BoxMesh_3fp06")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.23811042, 0, 0, 0, 2.3470685, 0, 0, 0, 0.19501264, 0.7281529, -1.1733193, 0.72420985)
+mesh = SubResource("BoxMesh_3fp06")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.23811042, 0, 0, 0, 2.3470685, 0, 0, 0, 0.19501264, -0.6718472, -1.1733193, 0.7242098)
+mesh = SubResource("BoxMesh_3fp06")
