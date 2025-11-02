@@ -19,6 +19,11 @@ mesh = SubResource("CapsuleMesh_3vyb7")
 [node name="head" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.692, 0)
 script = ExtResource("2_dovo2")
-sensitivity = null
 
 [node name="Camera3D" type="Camera3D" parent="head"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+visible = false
+light_energy = 5.0
+light_indirect_energy = 5.0
+light_volumetric_fog_energy = 5.0

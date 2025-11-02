@@ -1,12 +1,26 @@
-[gd_scene load_steps=9 format=3 uid="uid://drdl4wbx6falg"]
+[gd_scene load_steps=13 format=3 uid="uid://drdl4wbx6falg"]
 
 [ext_resource type="Texture2D" uid="uid://5lfan064dcru" path="res://assets/floor/close-up-concrete-wall-with-crack.jpg" id="1_377w7"]
 [ext_resource type="PackedScene" uid="uid://duim56isk7074" path="res://scenes/player/player.tscn" id="1_bovvr"]
+[ext_resource type="PackedScene" uid="uid://liicmwhiq8ih" path="res://scenes/house.tscn" id="3_b2cq8"]
+
+[sub_resource type="Gradient" id="Gradient_b2cq8"]
+interpolation_color_space = 2
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xb4v1"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_urvlt"]
+noise = SubResource("FastNoiseLite_xb4v1")
+color_ramp = SubResource("Gradient_b2cq8")
+seamless = true
+in_3d_space = true
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bovvr"]
-sky_top_color = Color(0.29538456, 0.32800764, 0.26066843, 1)
-sky_horizon_color = Color(0.5314733, 0.53187907, 0.50604427, 1)
-ground_horizon_color = Color(0.5314733, 0.53187907, 0.50604427, 1)
+sky_top_color = Color(1, 0, 0.31764707, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+sky_cover = SubResource("NoiseTexture2D_urvlt")
+ground_bottom_color = Color(0.07058824, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Sky" id="Sky_b2cq8"]
 sky_material = SubResource("ProceduralSkyMaterial_bovvr")
@@ -14,6 +28,8 @@ sky_material = SubResource("ProceduralSkyMaterial_bovvr")
 [sub_resource type="Environment" id="Environment_xb4v1"]
 background_mode = 2
 sky = SubResource("Sky_b2cq8")
+ambient_light_source = 3
+reflected_light_source = 2
 tonemap_mode = 2
 glow_enabled = true
 
@@ -37,6 +53,7 @@ shadow_enabled = true
 environment = SubResource("Environment_xb4v1")
 
 [node name="player" parent="." instance=ExtResource("1_bovvr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1752558, 1.164433, 1.2726256)
 
 [node name="floor" type="StaticBody3D" parent="."]
 
@@ -47,4 +64,5 @@ shape = SubResource("BoxShape3D_ftxyw")
 transform = Transform3D(14.999155, 0, 0.15917104, 0, 0.1, 0, -0.15917104, 0, 14.999155, 0, 0, 0)
 mesh = SubResource("BoxMesh_ftxyw")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="House" parent="." instance=ExtResource("3_b2cq8")]
+transform = Transform3D(0.45817608, 0, 0, 0, 0.45817608, 0, 0, 0, 0.45817608, 15.792683, 5.5857215, 1.5071816)
