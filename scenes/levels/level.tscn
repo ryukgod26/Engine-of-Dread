@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://drdl4wbx6falg"]
+[gd_scene load_steps=14 format=3 uid="uid://drdl4wbx6falg"]
 
 [ext_resource type="Texture2D" uid="uid://5lfan064dcru" path="res://assets/floor/close-up-concrete-wall-with-crack.jpg" id="1_377w7"]
 [ext_resource type="PackedScene" uid="uid://duim56isk7074" path="res://scenes/player/player.tscn" id="1_bovvr"]
 [ext_resource type="PackedScene" uid="uid://liicmwhiq8ih" path="res://scenes/house.tscn" id="3_b2cq8"]
+[ext_resource type="PackedScene" uid="uid://b40723b4yb8go" path="res://scenes/ghost.tscn" id="4_xb4v1"]
 
 [sub_resource type="Gradient" id="Gradient_b2cq8"]
 interpolation_color_space = 2
@@ -28,7 +29,7 @@ sky_material = SubResource("ProceduralSkyMaterial_bovvr")
 [sub_resource type="Environment" id="Environment_xb4v1"]
 background_mode = 2
 sky = SubResource("Sky_b2cq8")
-ambient_light_source = 3
+ambient_light_source = 2
 reflected_light_source = 2
 tonemap_mode = 2
 glow_enabled = true
@@ -65,4 +66,7 @@ transform = Transform3D(14.999155, 0, 0.15917104, 0, 0.1, 0, -0.15917104, 0, 14.
 mesh = SubResource("BoxMesh_ftxyw")
 
 [node name="House" parent="." instance=ExtResource("3_b2cq8")]
-transform = Transform3D(0.45817608, 0, 0, 0, 0.45817608, 0, 0, 0, 0.45817608, 15.792683, 5.5857215, 1.5071816)
+transform = Transform3D(0.45817608, 0, 0, 0, 0.45817608, 0, 0, 0, 0.45817608, 15.489643, 5.7732086, 0.41534853)
+
+[node name="Ghost" parent="." instance=ExtResource("4_xb4v1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5395527, 0.55015564, 0)

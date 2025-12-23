@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b40723b4yb8go"]
+
+[ext_resource type="Script" uid="uid://cqjtkki4l0tla" path="res://scripts/ghost.gd" id="1_l5lq6"]
+[ext_resource type="PackedScene" uid="uid://o1fdo2obq8t0" path="res://assets/ghost/horror_ghost_character_-_blood_stained_spirit.glb" id="2_bbnym"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l5lq6"]
+radius = 0.6352539
+height = 1.708545
+
+[node name="Ghost" type="CharacterBody3D"]
+script = ExtResource("1_l5lq6")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_bbnym")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.032031298, 0)
+shape = SubResource("CapsuleShape3D_l5lq6")
+
+[node name="killArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="killArea"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.014575124, 0)
+shape = SubResource("CapsuleShape3D_l5lq6")
+
+[connection signal="body_entered" from="killArea" to="." method="_on_kill_area_body_entered"]

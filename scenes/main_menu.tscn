@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dymg4iggqmdsg"]
 
 [ext_resource type="Script" uid="uid://7e8d14tgrswn" path="res://scripts/main_menu.gd" id="1_ekxnf"]
-[ext_resource type="Texture2D" uid="uid://bpqb5bdo7aha0" path="res://assets/Images/main_menu1.png" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://7l3an0rf0dfj" path="res://assets/Images/main_menu1.png" id="2_ekxnf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
 texture = ExtResource("2_ekxnf")
@@ -65,6 +65,8 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_wu84c")
 text = "Quit"
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
