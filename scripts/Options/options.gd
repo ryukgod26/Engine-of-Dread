@@ -62,7 +62,6 @@ func _on_window_type_item_selected(index: int) -> void:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 ##Audio Controls
-
 func _on_master_volume_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(master_bus_idx,linear_to_db(value))
 	master_volume.value = value
@@ -80,14 +79,16 @@ func _on_mute_btn_toggled(toggled_on: bool) -> void:
 		master_volume.value = 0
 	else:
 		master_volume.value = volume
-
 ##Controls Settings
 func _on_fov_value_changed(value: float) -> void:
-	pass
-
+	Globals.fov = value
 
 func _on_senstivity_value_changed(value: float) -> void:
-	pass
+	Globals.mouse_sensitivity = value
 
+func _on_invert_y_axis_toggled(toggled_on: bool) -> void:
+	Globals.invert_y_axis = toggled_on
+
+#back Button
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

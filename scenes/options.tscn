@@ -1,6 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://chn50skddla50"]
+[gd_scene load_steps=5 format=3 uid="uid://chn50skddla50"]
 
-[ext_resource type="Script" uid="uid://dx222jospdr6v" path="res://scripts/options.gd" id="1_4geyq"]
+[ext_resource type="Script" uid="uid://dx222jospdr6v" path="res://scripts/Options/options.gd" id="1_4geyq"]
+[ext_resource type="Script" uid="uid://b63ywksxf7ksy" path="res://scripts/Options/Slider.gd" id="2_yjkok"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjkok"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2iy26"]
+bg_color = Color(0.80721235, 0, 0.20404807, 1)
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -19,7 +25,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 2
+current_tab = 1
 all_tabs_in_front = true
 
 [node name="Video" type="VBoxContainer" parent="TabContainer"]
@@ -58,7 +64,6 @@ popup/item_1/text = "Windowed"
 popup/item_1/id = 1
 
 [node name="Audio" type="VBoxContainer" parent="TabContainer"]
-visible = false
 layout_mode = 2
 theme_override_constants/separation = 9
 metadata/_tab_index = 1
@@ -70,6 +75,9 @@ horizontal_alignment = 1
 
 [node name="MasterVolume" type="HSlider" parent="TabContainer/Audio"]
 layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_yjkok")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_2iy26")
+script = ExtResource("2_yjkok")
 
 [node name="MusicVolumelbl" type="Label" parent="TabContainer/Audio"]
 layout_mode = 2
@@ -78,6 +86,7 @@ horizontal_alignment = 1
 
 [node name="MusicVolume" type="HSlider" parent="TabContainer/Audio"]
 layout_mode = 2
+script = ExtResource("2_yjkok")
 
 [node name="SFXVolumelbl" type="Label" parent="TabContainer/Audio"]
 layout_mode = 2
@@ -86,11 +95,14 @@ horizontal_alignment = 1
 
 [node name="SFXVolume" type="HSlider" parent="TabContainer/Audio"]
 layout_mode = 2
+script = ExtResource("2_yjkok")
 
 [node name="MuteBtn" type="CheckBox" parent="TabContainer/Audio"]
 layout_mode = 2
+text = "MUTE"
 
 [node name="Controls" type="VBoxContainer" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -105,6 +117,7 @@ min_value = 70.0
 max_value = 110.0
 step = 0.4
 value = 70.0
+script = ExtResource("2_yjkok")
 
 [node name="Senstivitylbl" type="Label" parent="TabContainer/Controls"]
 layout_mode = 2
@@ -117,6 +130,11 @@ min_value = 0.3
 max_value = 3.0
 step = 0.27
 value = 0.3
+script = ExtResource("2_yjkok")
+
+[node name="InvertYAxis" type="CheckBox" parent="TabContainer/Controls"]
+layout_mode = 2
+text = "Invert Y Axis"
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 1
@@ -137,4 +155,5 @@ text = "BACK"
 [connection signal="toggled" from="TabContainer/Audio/MuteBtn" to="." method="_on_mute_btn_toggled"]
 [connection signal="value_changed" from="TabContainer/Controls/FOV" to="." method="_on_fov_value_changed"]
 [connection signal="value_changed" from="TabContainer/Controls/Senstivity" to="." method="_on_senstivity_value_changed"]
+[connection signal="toggled" from="TabContainer/Controls/InvertYAxis" to="." method="_on_invert_y_axis_toggled"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
