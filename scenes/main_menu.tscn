@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://dymg4iggqmdsg"]
+[gd_scene load_steps=10 format=3 uid="uid://dymg4iggqmdsg"]
 
 [ext_resource type="Script" uid="uid://7e8d14tgrswn" path="res://scripts/Main_Menu/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://7l3an0rf0dfj" path="res://assets/Images/main_menu1.png" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://bio2m26xkfhrv" path="res://assets/Menu/pixel_art_bat/pixel_art_bat/bat_angry.png" id="3_bqqt6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
 texture = ExtResource("2_ekxnf")
@@ -14,6 +15,29 @@ bg_color = Color(0.29185393, 0.099484645, 0.12828988, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wu84c"]
 bg_color = Color(0.29185393, 0.099484645, 0.12828988, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ekxnf"]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 3
+particles_anim_loop = true
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_bqqt6"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(40, 40, 40)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_min = 180.00002
+angle_max = 180.00002
+inherit_velocity_ratio = 1.0
+spread = 180.0
+initial_velocity_min = 18.949999
+initial_velocity_max = 145.94
+gravity = Vector3(0, 0, 0)
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+anim_offset_max = 1.0
+turbulence_enabled = true
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -67,6 +91,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_wu84c")
 text = "Quit"
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_ekxnf")
+position = Vector2(575.00006, 327)
+rotation = 1.5797255
+scale = Vector2(13.199025, -17.33001)
+amount = 50
+texture = ExtResource("3_bqqt6")
+process_material = SubResource("ParticleProcessMaterial_bqqt6")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]

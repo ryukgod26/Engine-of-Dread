@@ -25,7 +25,6 @@ func _ready():
 	
 	update_label_position()
 
-
 func _on_value_changed(new_value):
 	update_label_position()
 	label.text = str(new_value)

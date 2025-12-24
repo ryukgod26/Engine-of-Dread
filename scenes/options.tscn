@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://dx222jospdr6v" path="res://scripts/Options/options.gd" id="1_4geyq"]
 [ext_resource type="Script" uid="uid://b63ywksxf7ksy" path="res://scripts/Options/Slider.gd" id="2_yjkok"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjkok"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kv8mn"]
+bg_color = Color(0.76539606, 0.5486785, 0.34681556, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2iy26"]
 bg_color = Color(0.80721235, 0, 0.20404807, 1)
@@ -75,7 +76,7 @@ horizontal_alignment = 1
 
 [node name="MasterVolume" type="HSlider" parent="TabContainer/Audio"]
 layout_mode = 2
-theme_override_styles/slider = SubResource("StyleBoxFlat_yjkok")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_kv8mn")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_2iy26")
 script = ExtResource("2_yjkok")
 
