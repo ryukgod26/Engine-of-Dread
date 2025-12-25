@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://7w2d6ssart42"]
+
+[ext_resource type="Texture2D" uid="uid://calcofk0ekdgo" path="res://assets/Menu/Images/game_loading_page.png" id="1_57gvn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_la43k"]
+texture = ExtResource("1_57gvn")
+
+[node name="GameLoadingScreen" type="CanvasLayer"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_la43k")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.446
+anchor_top = 0.725
+anchor_right = 0.53800005
+anchor_bottom = 0.748
+offset_left = -8.791992
+offset_top = -6.8000183
+offset_right = 1.223938
+offset_bottom = 8.29599
+grow_horizontal = 2
+grow_vertical = 2
+text = "0%"
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+anchors_preset = -1
+anchor_top = 0.88600004
+anchor_right = 1.0
+anchor_bottom = 0.961
+offset_left = 4.0
+offset_top = -0.12805176
+offset_right = 6.0
+offset_bottom = 4.2719727
+grow_horizontal = 2
+grow_vertical = 0
