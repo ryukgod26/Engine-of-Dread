@@ -3,7 +3,6 @@ extends HSlider
 @export var show_on_hover_only: bool = true
 @onready var label
 
-
 @export var vertical_offset: float = 5.0 
 
 func _ready():
@@ -11,14 +10,12 @@ func _ready():
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.text = str(value)
 	label.add_theme_color_override("font_color", Color.WHITE) 
-	
 
 	add_child(label)
 	
 	if show_on_hover_only:
 		label.modulate.a = 0.0 
 	
-
 	value_changed.connect(_on_value_changed)
 	drag_started.connect(_on_drag_started)
 	drag_ended.connect(_on_drag_ended)

@@ -77,7 +77,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5395527, 0.55015564, 0)
 transform = Transform3D(-0.74578804, 0, 0.0035405648, 0, 0.74579644, 0, -0.0035405648, 0, -0.74578804, -19.978586, 2.4201956, -7.6712017)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="ghost_house"]
-transform = Transform3D(1.3408482, 0, 4.656613e-10, 0, 1.3408483, 0, -4.656613e-10, 0, 1.3408482, 7.8903465, 0, -0.03745842)
-omni_range = 15.689605
+transform = Transform3D(1.3408482, 0, 9.313226e-10, 0, 1.3408483, 0, -9.313226e-10, 0, 1.3408482, 7.8903503, -8.168191, -0.037457466)
+omni_range = 40.845894
 
-[editable path="ghost_house"]
+[node name="OmniLight3D5" type="OmniLight3D" parent="ghost_house"]
+transform = Transform3D(1.3408482, 0, 9.313226e-10, 0, 1.3408483, 0, -9.313226e-10, 0, 1.3408482, 7.8903503, 3.5480304, -0.037457466)
+omni_range = 40.845894
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="ghost_house"]
+transform = Transform3D(1.3408482, 0, 9.313226e-10, 0, 1.3408483, 0, -9.313226e-10, 0, 1.3408482, -4.4479103, 0, 7.6948566)
+omni_range = 40.845894
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="ghost_house"]
+transform = Transform3D(1.3408482, 0, 9.313226e-10, 0, 1.3408483, 0, -9.313226e-10, 0, 1.3408482, -4.383482, 0, 21.265781)
+omni_range = 40.845894
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="ghost_house"]
+transform = Transform3D(1.3408482, 0, 9.313226e-10, 0, 1.3408483, 0, -9.313226e-10, 0, 1.3408482, 7.6684303, 0, 21.208563)
+omni_range = 40.845894

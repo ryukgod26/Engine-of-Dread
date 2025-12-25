@@ -1,11 +1,120 @@
-[gd_scene load_steps=3 format=3 uid="uid://7w2d6ssart42"]
+[gd_scene load_steps=23 format=3 uid="uid://7w2d6ssart42"]
 
 [ext_resource type="Texture2D" uid="uid://calcofk0ekdgo" path="res://assets/Menu/Images/game_loading_page.png" id="1_57gvn"]
+[ext_resource type="Script" uid="uid://bfl72d8n4on7j" path="res://scripts/Loading_Screen/game_loading_screen.gd" id="1_unkn8"]
+[ext_resource type="FontFile" uid="uid://d4a80q6kbppcx" path="res://assets/fonts/stranger_back_in_the_night/Stranger back in the Night.ttf" id="2_2gcry"]
+[ext_resource type="Texture2D" uid="uid://bio2m26xkfhrv" path="res://assets/Menu/pixel_art_bat/pixel_art_bat/bat_angry.png" id="4_45e7u"]
+[ext_resource type="Script" uid="uid://b7ab5wa0spm3b" path="res://scripts/Loading_Screen/game_loading_screen_path_2d.gd" id="4_wd8fa"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_la43k"]
 texture = ExtResource("1_57gvn")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gcry"]
+bg_color = Color(0.014275216, 0.014275219, 0.014275208, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_unkn8"]
+bg_color = Color(0.9137255, 0, 0, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_unkn8"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 602, 330, 0, 0, 0, 0, 612, 402)
+}
+point_count = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45e7u"]
+atlas = ExtResource("4_45e7u")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wd8fa"]
+atlas = ExtResource("4_45e7u")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0qhj"]
+atlas = ExtResource("4_45e7u")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iqtvv"]
+atlas = ExtResource("4_45e7u")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrvgm"]
+atlas = ExtResource("4_45e7u")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqkk0"]
+atlas = ExtResource("4_45e7u")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnvbi"]
+atlas = ExtResource("4_45e7u")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wk27p"]
+atlas = ExtResource("4_45e7u")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vkshu"]
+atlas = ExtResource("4_45e7u")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh2we"]
+atlas = ExtResource("4_45e7u")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2quy"]
+atlas = ExtResource("4_45e7u")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta3nc"]
+atlas = ExtResource("4_45e7u")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ceb0w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45e7u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wd8fa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0qhj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iqtvv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qrvgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqkk0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnvbi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wk27p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vkshu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh2we")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2quy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ta3nc")
+}],
+"loop": true,
+"name": &"Anim",
+"speed": 5.0
+}]
+
 [node name="GameLoadingScreen" type="CanvasLayer"]
+script = ExtResource("1_unkn8")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 15
@@ -15,28 +124,84 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_la43k")
 
-[node name="Label" type="Label" parent="."]
+[node name="ProgressText" type="Label" parent="."]
 anchors_preset = -1
 anchor_left = 0.446
 anchor_top = 0.725
 anchor_right = 0.53800005
 anchor_bottom = 0.748
 offset_left = -8.791992
-offset_top = -6.8000183
+offset_top = -21.800018
 offset_right = 1.223938
-offset_bottom = 8.29599
+offset_bottom = 23.29599
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_2gcry")
+theme_override_font_sizes/font_size = 60
 text = "0%"
+horizontal_alignment = 1
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+[node name="LoadingProgressBar" type="ProgressBar" parent="."]
 anchors_preset = -1
+anchor_left = 0.023000002
 anchor_top = 0.88600004
-anchor_right = 1.0
+anchor_right = 0.96900004
 anchor_bottom = 0.961
-offset_left = 4.0
+offset_left = 0.5039978
 offset_top = -0.12805176
-offset_right = 6.0
+offset_right = -0.28808594
 offset_bottom = 4.2719727
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/background = SubResource("StyleBoxFlat_2gcry")
+theme_override_styles/fill = SubResource("StyleBoxFlat_unkn8")
+rounded = true
+show_percentage = false
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_unkn8")
+script = ExtResource("4_wd8fa")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(602, 330)
+rotation = 1.4327903
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-3.8510966, 3.3420136)
+rotation = -0.5173467
+scale = Vector2(2.34375, 1.5)
+sprite_frames = SubResource("SpriteFrames_ceb0w")
+animation = &"Anim"
+autoplay = "Anim"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-3.8510966, 3.3420136)
+rotation = -1.4242101
+scale = Vector2(2.34375, 1.5)
+sprite_frames = SubResource("SpriteFrames_ceb0w")
+animation = &"Anim"
+autoplay = "Anim"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-61.82322, -41.903324)
+rotation = -1.5625198
+scale = Vector2(2.34375, 1.5)
+sprite_frames = SubResource("SpriteFrames_ceb0w")
+animation = &"Anim"
+autoplay = "Anim"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-94.757095, 107.99118)
+rotation = -1.5597951
+scale = Vector2(2.34375, 1.5)
+sprite_frames = SubResource("SpriteFrames_ceb0w")
+animation = &"Anim"
+autoplay = "Anim"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-41.38056, -167.28316)
+rotation = -1.0844202
+scale = Vector2(2.2446108, 1.6096952)
+sprite_frames = SubResource("SpriteFrames_ceb0w")
+animation = &"Anim"
+autoplay = "Anim"
