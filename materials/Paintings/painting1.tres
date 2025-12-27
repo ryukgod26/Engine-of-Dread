@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dut5xcuko2jju"]
+
+[ext_resource type="Texture2D" uid="uid://ut844rmrq7jj" path="res://assets/Paintings/skull.png" id="1_jjnpn"]
+
+[resource]
+albedo_color = Color(0.29219002, 0.29219005, 0.29219002, 1)
+albedo_texture = ExtResource("1_jjnpn")

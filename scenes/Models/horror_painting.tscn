@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4n8e027sn51i"]
+
+[ext_resource type="PackedScene" uid="uid://dwbusyj4wpy6n" path="res://assets/Blender/Horror_Paintings/horror_painting.glb" id="1_xigdk"]
+[ext_resource type="Script" uid="uid://c703paydbermh" path="res://scripts/Models/horror_painting.gd" id="2_msk1d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_msk1d"]
+size = Vector3(0.26586914, 1.9667969, 2.012329)
+
+[node name="horror_painting" instance=ExtResource("1_xigdk")]
+script = ExtResource("2_msk1d")
+
+[node name="Plane" parent="." index="1"]
+transform = Transform3D(-4.0631033e-08, 0.92952967, 3.5520776e-15, -4.0631033e-08, 1.7760388e-15, -0.92952967, -0.92952967, -4.0631033e-08, 4.0631033e-08, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010375977, 0.01171875, 0.0017700195)
+shape = SubResource("BoxShape3D_msk1d")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://drdl4wbx6falg"]
+[gd_scene load_steps=20 format=3 uid="uid://drdl4wbx6falg"]
 
 [ext_resource type="Texture2D" uid="uid://5lfan064dcru" path="res://assets/floor/close-up-concrete-wall-with-crack.jpg" id="1_377w7"]
 [ext_resource type="PackedScene" uid="uid://duim56isk7074" path="res://scenes/player/player.tscn" id="1_bovvr"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://58ipq0r1kbet" path="res://scenes/table.tscn" id="6_mbbpy"]
 [ext_resource type="PackedScene" uid="uid://b2jywm01hspq0" path="res://scenes/chair.tscn" id="7_ouxo3"]
 [ext_resource type="PackedScene" uid="uid://6ovsedqhwocd" path="res://scenes/Models/ghost_drawer.tscn" id="8_ouxo3"]
+[ext_resource type="PackedScene" uid="uid://b4n8e027sn51i" path="res://scenes/Models/horror_painting.tscn" id="9_icy5c"]
+[ext_resource type="Material" uid="uid://dut5xcuko2jju" path="res://materials/Paintings/painting1.tres" id="10_rmjfq"]
 
 [sub_resource type="Gradient" id="Gradient_b2cq8"]
 interpolation_color_space = 2
@@ -108,3 +110,9 @@ transform = Transform3D(0.9999991, 0, 1.8626451e-09, 0, 0.99999934, 0, -1.862645
 
 [node name="ghost_drawer2" parent="ghost_house/Drawers" instance=ExtResource("8_ouxo3")]
 transform = Transform3D(0.999999, 0, 2.3283064e-09, 0, 0.9999993, 0, -2.3283064e-09, 0, 0.999999, -16.406507, -1.3570666, 7.3307047)
+
+[node name="Paintings" type="Node3D" parent="ghost_house"]
+
+[node name="horror_painting" parent="ghost_house/Paintings" instance=ExtResource("9_icy5c")]
+transform = Transform3D(-4.371137e-08, 0, 0.9999996, 0, 0.99999964, 0, -0.9999996, 0, -4.371137e-08, 9.292635, 4.9633183, 14.548312)
+painting = ExtResource("10_rmjfq")
