@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6o4tc4q33jlt"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_doywd"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_doywd"]
+height = 0.28
+radial_segments = 32
+rings = 16
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_doywd"]
+radial_segments = 18
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_doywd"]
+size = Vector3(3.910797, 1.5636902, 1.3288574)
+
+[node name="Couch" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.7003994, 0, 0, 0, 0.6406105, 0, 0, 0, 1, 0, -0.61674225, 0)
+mesh = SubResource("BoxMesh_doywd")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.7003994, 0, 0, 0, 1.5555502, 0, 0, 0, 0.19027323, 0, -0.16154626, 0.5882065)
+mesh = SubResource("BoxMesh_doywd")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.3453307, 0, 0, 0, 1.3557767, 0, 0, 0, 0.89517987, 0.68004525, -0.19069436, -0.06725705)
+mesh = SubResource("SphereMesh_doywd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.3453307, 0, 0, 0, 1.3557767, 0, 0, 0, 0.89517987, -0.67729676, -0.19069436, -0.06725705)
+mesh = SubResource("SphereMesh_doywd")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.3453307, 0, 0, 0, -5.926288e-08, 0.89518, 0, -1.3557767, -3.912956e-08, 0.68004525, 0.15307164, 0.40952086)
+mesh = SubResource("SphereMesh_doywd")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.3453307, 0, 0, 0, -5.926288e-08, 0.89518, 0, -1.3557767, -3.912956e-08, -0.67729676, 0.15307164, 0.40952086)
+mesh = SubResource("SphereMesh_doywd")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.705, 0, 0, 0, -2.1571571e-08, -0.705, 0, 0.4935, -3.081653e-08, 1.6137629, -0.33594748, 0.07143296)
+mesh = SubResource("CylinderMesh_doywd")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.705, 0, 0, 0, -2.1571571e-08, -0.705, 0, 0.4935, -3.081653e-08, -1.6285381, -0.33594748, 0.07143296)
+mesh = SubResource("CylinderMesh_doywd")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.03819275, -0.15208435, 0.13952637)
+shape = SubResource("BoxShape3D_doywd")
