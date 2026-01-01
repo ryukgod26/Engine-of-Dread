@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp1n7y60ci8al"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vtrdk"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vtrdk"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vtrdk"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_mkop7"]
+
+[node name="Door" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.13456884, 0, 0, 0, 1.9233316, 0, 0, 0, 1.2648193, 0, 0.019926429, 0)
+mesh = SubResource("BoxMesh_vtrdk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("BoxShape3D_vtrdk")
+
+[node name="Knob" type="Node3D" parent="."]
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Knob"]
+transform = Transform3D(-4.5035073e-09, -0.20044346, 0, 0.10302824, -8.7616625e-09, 0, 0, 0, 0.10302824, -0.0070070624, 0.077617735, 0.5184868)
+mesh = SubResource("CylinderMesh_vtrdk")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Knob"]
+transform = Transform3D(-5.076147e-09, -0.035392255, 0, 0.116128705, -1.5470447e-09, 0, 0, 0, 0.122424684, 0.18116365, 0.07837838, 0.5168977)
+mesh = SubResource("CylinderMesh_mkop7")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Knob"]
+transform = Transform3D(-5.076147e-09, -0.035392255, 0, 0.116128705, -1.5470447e-09, 0, 0, 0, 0.122424684, -0.1846722, 0.07837838, 0.5168977)
+mesh = SubResource("CylinderMesh_mkop7")
+skeleton = NodePath("../..")
+
+[node name="Hinge" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.034000993, 0, 0)
