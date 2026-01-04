@@ -1,0 +1,55 @@
+[gd_scene load_steps=9 format=3 uid="uid://b60o76n5yl0gf"]
+
+[ext_resource type="Script" uid="uid://drsfafk7yaas8" path="res://scripts/Lamp/lamp.gd" id="1_wdeyg"]
+[ext_resource type="Script" uid="uid://c11x5f7rogk2c" path="res://scripts/Lamp/lamp_static_body.gd" id="2_uhj3a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uhj3a"]
+albedo_color = Color(0, 1, 1, 1)
+emission_enabled = true
+emission = Color(0.33397844, 0.997837, 0.9116159, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ba3r"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ifblt"]
+top_radius = 0.3
+radial_segments = 24
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wdeyg"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_uhj3a"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ifblt"]
+size = Vector3(0.9680176, 2.1488342, 0.91845703)
+
+[node name="lamp" type="Node3D"]
+script = ExtResource("1_wdeyg")
+on_mat = SubResource("StandardMaterial3D_uhj3a")
+off_mat = SubResource("StandardMaterial3D_3ba3r")
+light_color = Color(0, 1, 1, 1)
+
+[node name="lamp_head" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.29580465, 0, 0, 0, 1, 0, 0, 0)
+cast_shadow = 0
+mesh = SubResource("CylinderMesh_ifblt")
+
+[node name="lamp_stand" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 1, 0, 0, 0, 0.2, 0, -0.7209752, 0)
+cast_shadow = 0
+mesh = SubResource("CylinderMesh_wdeyg")
+
+[node name="lamp_stand_rest" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.6004047, 0, 0, 0, 0.09102203, 0, 0, 0, 0.6004047, 0, -1.7847714, 0)
+cast_shadow = 0
+mesh = SubResource("CylinderMesh_uhj3a")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+omni_range = 3.0
+
+[node name="lamp_static_body" type="StaticBody3D" parent="." node_paths=PackedStringArray("lamp") groups=["interectable"]]
+script = ExtResource("2_uhj3a")
+lamp = NodePath("..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="lamp_static_body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024047852, -0.7645416, 0.040771484)
+shape = SubResource("BoxShape3D_ifblt")
