@@ -166,7 +166,7 @@ transform = Transform3D(1, 0, 0, 0, 4.5391917, 0, 0, 0, 1, -4.698821, -7.9565253
 mesh = SubResource("CylinderMesh_txgct")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Pillars" index="1"]
-transform = Transform3D(1, 0, 0, 0, 4.5391917, 0, 0, 0, 1, 11.087737, -7.9565253, 18.556973)
+transform = Transform3D(1, 0, 0, 0, 4.5391917, 0, 0, 0, 1, 0.08773708, -7.9565253, 18.556973)
 mesh = SubResource("CylinderMesh_txgct")
 
 [node name="Beds" type="Node3D" parent="." index="17"]
@@ -257,3 +257,5 @@ transform = Transform3D(-1.7484554e-08, 0, -0.39999998, 0, 0.39999998, 0, 0.3999
 
 [node name="bathroom_mirror" parent="Mirrors" index="0" instance=ExtResource("22_nwm5n")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 17.5, 2, 22)
+
+[node name="Basement_Room" type="Node3D" parent="." index="25"]
