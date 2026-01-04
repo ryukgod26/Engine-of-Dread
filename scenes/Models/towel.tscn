@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc0up7gog7ksb"]
+
+[ext_resource type="PackedScene" uid="uid://ddjrcc4rvki7t" path="res://assets/Blender/Bathroom_Furniture/eod_towel.glb" id="1_jyq2v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jyq2v"]
+size = Vector3(3.5, 2.4, 3.8)
+
+[node name="towel" instance=ExtResource("1_jyq2v")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4499998, 1.9999999, -0.100000024)
+shape = SubResource("BoxShape3D_jyq2v")

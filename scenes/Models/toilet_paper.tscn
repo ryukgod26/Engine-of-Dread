@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://djsx77kjoju33"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_scyrj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0pkdj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_scyrj"]
+size = Vector3(2.8, 1, 2.5)
+
+[node name="toilet_paper" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_scyrj")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.360415e-08, 1.1016002, 0, -0.53999996, -4.8152472e-08, 0, 0, 0, 0.54, 0, 0, 0)
+mesh = SubResource("CylinderMesh_scyrj")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.19999999, 0, 0, 0, 0.36, 0, 0, 0, 2.2, 1.2, 0.1, -0.9)
+mesh = SubResource("BoxMesh_0pkdj")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.19999999, 0, 0, 0, 0.36, 0, 0, 0, 2.2, -1.2, 0.1, -0.9)
+mesh = SubResource("BoxMesh_0pkdj")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.39199996, 0, 0, 0, 0.36, 0, 0, 0, 0.39600003, -1.2, 0.1, -1.9000001)
+mesh = SubResource("BoxMesh_0pkdj")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.39199996, 0, 0, 0, 0.36, 0, 0, 0, 0.39600003, 1.2, 0.1, -1.9000001)
+mesh = SubResource("BoxMesh_0pkdj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1920929e-07, 0, -0.75)
+shape = SubResource("BoxShape3D_scyrj")

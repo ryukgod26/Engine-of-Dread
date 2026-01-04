@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://v6yg6yocle5q"]
+
+[ext_resource type="PackedScene" uid="uid://c0h1qvo34funq" path="res://assets/Blender/Bathroom_Furniture/toilet.glb" id="1_gi2so"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gi2so"]
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a86bb"]
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2u3h5"]
+albedo_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uycce"]
+albedo_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
+roughness = 0.3
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ascf"]
+size = Vector3(2.2622375, 5.5144043, 3.2210693)
+
+[node name="toilet" instance=ExtResource("1_gi2so")]
+
+[node name="Cylinder" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_gi2so")
+
+[node name="Cylinder_001" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_a86bb")
+
+[node name="Cylinder_002" parent="." index="2"]
+material_override = SubResource("StandardMaterial3D_a86bb")
+
+[node name="Cube" parent="." index="3"]
+material_override = SubResource("StandardMaterial3D_a86bb")
+
+[node name="Cylinder_003" parent="." index="4"]
+material_override = SubResource("StandardMaterial3D_a86bb")
+
+[node name="Cube_001" parent="." index="5"]
+material_override = SubResource("StandardMaterial3D_2u3h5")
+
+[node name="Cube_002" parent="." index="6"]
+material_override = SubResource("StandardMaterial3D_uycce")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0076141357, 0.07434082, -0.37493896)
+shape = SubResource("BoxShape3D_7ascf")

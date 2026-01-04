@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cixvh0cpbo5if"]
+
+[ext_resource type="PackedScene" uid="uid://c4s6neyyh5cqr" path="res://assets/Blender/Bathroom_Furniture/eod_bathtub.glb" id="1_qclcd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qclcd"]
+roughness = 0.3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rn6n"]
+albedo_color = Color(0.92156863, 0, 0, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dg8x6"]
+albedo_color = Color(0, 0, 0.8392157, 1)
+
+[node name="bathtub" instance=ExtResource("1_qclcd")]
+
+[node name="Cube" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_qclcd")
+
+[node name="Cylinder_001" parent="." index="3"]
+material_override = SubResource("StandardMaterial3D_7rn6n")
+
+[node name="Cylinder_002" parent="." index="4"]
+material_override = SubResource("StandardMaterial3D_dg8x6")
+
+[node name="Cylinder_007" parent="." index="9"]
+material_override = SubResource("StandardMaterial3D_7rn6n")
+
+[node name="Cylinder_008" parent="." index="10"]
+material_override = SubResource("StandardMaterial3D_dg8x6")

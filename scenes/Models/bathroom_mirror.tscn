@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://drrmhpkab66mp"]
+
+[ext_resource type="PackedScene" uid="uid://b8gac6sug1goq" path="res://assets/Blender/Bathroom_Furniture/bathroom_mirror.glb" id="1_k2rvm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k2rvm"]
+metallic = 1.0
+roughness = 0.1
+
+[node name="bathroom_mirror" instance=ExtResource("1_k2rvm")]
+
+[node name="Cube_001" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_k2rvm")
