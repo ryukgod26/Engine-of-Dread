@@ -73,9 +73,9 @@ transform = Transform3D(0.13456884, 0, 0, 0, 1.9233316, 0, 0, 0, 1.2648193, 0, 0
 mesh = SubResource("BoxMesh_vtrdk")
 skeleton = NodePath("../..")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Hinge/MeshInstance3D"]
+[node name="door" type="StaticBody3D" parent="Hinge/MeshInstance3D"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Hinge/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hinge/MeshInstance3D/door"]
 shape = SubResource("BoxShape3D_vtrdk")
 
 [node name="Knob" type="Node3D" parent="Hinge"]

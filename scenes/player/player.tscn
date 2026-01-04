@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://duim56isk7074"]
+[gd_scene load_steps=6 format=3 uid="uid://duim56isk7074"]
 
 [ext_resource type="Script" uid="uid://cdkt6wutxxaar" path="res://scripts/Player/player.gd" id="1_8afob"]
 [ext_resource type="Script" uid="uid://cxxp325sqxxfe" path="res://scripts/Player/player_head.gd" id="2_dovo2"]
+[ext_resource type="Script" uid="uid://c348sm2afj02d" path="res://scripts/Player/player_interact.gd" id="3_gmlin"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
@@ -21,6 +22,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.692, 0)
 script = ExtResource("2_dovo2")
 
 [node name="Camera3D" type="Camera3D" parent="head"]
+
+[node name="RayCast3D" type="RayCast3D" parent="head"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+target_position = Vector3(0, -1.5, 0)
+script = ExtResource("3_gmlin")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
 light_energy = 5.0
