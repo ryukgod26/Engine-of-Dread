@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://gdf4r0aoloj2"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_ks5bp"]
+radial_segments = 24
+
+[sub_resource type="BoxMesh" id="BoxMesh_o6oq5"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_v4ke5"]
+radial_segments = 24
+
+[node name="hot_water_system" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 0.1, 0, 0, 0, 1.2, 0, 0, 0)
+mesh = SubResource("CylinderMesh_ks5bp")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.2, 0, 0, 0, 0.1, 0, 0, 0, 1.2, 0, 2, 0)
+mesh = SubResource("CylinderMesh_ks5bp")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.864, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CylinderMesh_ks5bp")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.08402726, 0, 0, 0, 0.22809514, 0, 0, 0, 0.28241345, -0.5354023, 1, 0)
+mesh = SubResource("BoxMesh_o6oq5")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.11207836, 0, 0, 0, -2.8417494e-08, -0.11207836, 0, 0.6501165, -4.899101e-09, -0.509545, 0.986912, -0.7679803)
+mesh = SubResource("CylinderMesh_v4ke5")
