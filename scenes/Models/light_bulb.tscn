@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr4kxn31cwkon"]
+
+[ext_resource type="PackedScene" uid="uid://do6ddbdml47b5" path="res://assets/Blender/Light_Bulb/engine_of_dread_light_bulb.glb" id="1_01wic"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ulb2a"]
+emission_enabled = true
+emission = Color(0.9194276, 0.888868, 0.7058171, 1)
+
+[node name="light_bulb" instance=ExtResource("1_01wic")]
+
+[node name="Cylinder" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_ulb2a")
+cast_shadow = 0
+
+[node name="Cylinder_001" parent="." index="1"]
+cast_shadow = 0
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.9644284, 0)
+shadow_enabled = true
+omni_range = 15.0
