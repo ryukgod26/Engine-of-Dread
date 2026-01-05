@@ -1,7 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://chn50skddla50"]
+[gd_scene load_steps=8 format=3 uid="uid://chn50skddla50"]
 
 [ext_resource type="Script" uid="uid://dx222jospdr6v" path="res://scripts/Options/options.gd" id="1_4geyq"]
+[ext_resource type="FontFile" uid="uid://bqn7o1mnnp4qx" path="res://assets/fonts/tab_container_title/Orbitron/Orbitron-VariableFont_wght.ttf" id="2_1sggn"]
 [ext_resource type="Script" uid="uid://b63ywksxf7ksy" path="res://scripts/Options/Slider.gd" id="2_yjkok"]
+[ext_resource type="AudioStream" uid="uid://dt6r18hff8hlm" path="res://assets/Sound/button_click.wav" id="3_2iy26"]
+[ext_resource type="AudioStream" uid="uid://lm0j6ewm4nfh" path="res://assets/Sound/option_select.wav" id="4_kv8mn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kv8mn"]
 bg_color = Color(0.76539606, 0.5486785, 0.34681556, 1)
@@ -25,11 +28,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_hovered_color = Color(0.6830772, 0.6830774, 0.6830771, 1)
+theme_override_colors/font_unselected_color = Color(0.35156313, 0.35156283, 0.35156286, 1)
+theme_override_fonts/font = ExtResource("2_1sggn")
 tab_alignment = 1
-current_tab = 0
+current_tab = 2
 all_tabs_in_front = true
 
 [node name="Video" type="VBoxContainer" parent="TabContainer"]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -103,7 +110,6 @@ layout_mode = 2
 text = "MUTE"
 
 [node name="Controls" type="VBoxContainer" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 
@@ -147,6 +153,13 @@ offset_top = -31.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "BACK"
+
+[node name="ClickSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2iy26")
+bus = &"SFX"
+
+[node name="OptionSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_kv8mn")
 
 [connection signal="item_selected" from="TabContainer/Video/Resolution" to="." method="_on_resolution_item_selected"]
 [connection signal="item_selected" from="TabContainer/Video/WindowType" to="." method="_on_window_type_item_selected"]

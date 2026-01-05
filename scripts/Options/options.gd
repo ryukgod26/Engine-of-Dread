@@ -53,6 +53,8 @@ func _on_resolution_item_selected(index: int) -> void:
 			DisplayServer.window_set_size(Vector2i(1080,720))
 		2:
 			DisplayServer.window_set_size(Vector2i(1920,1080))
+	$OptionSound.pitch_scale = randf_range(0.9, 1.1)
+	$OptionSound.play()
 
 func _on_window_type_item_selected(index: int) -> void:
 	match index:
@@ -60,6 +62,8 @@ func _on_window_type_item_selected(index: int) -> void:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 		1:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	$OptionSound.pitch_scale = randf_range(0.9, 1.1)
+	$OptionSound.play()
 
 ##Audio Controls
 func _on_master_volume_value_changed(value: float) -> void:
@@ -92,3 +96,15 @@ func _on_invert_y_axis_toggled(toggled_on: bool) -> void:
 #back Button
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+		
+		var hovered_control = get_viewport().gui_get_hovered_control()
+		
+		if hovered_control and hovered_control is Button:
+			
+			if !hovered_control.disabled:
+				$ClickSound.pitch_scale = randf_range(0.9, 1.1)
+				$ClickSound.play()
