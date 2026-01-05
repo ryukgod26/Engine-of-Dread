@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://gdf4r0aoloj2"]
+[gd_scene load_steps=6 format=3 uid="uid://gdf4r0aoloj2"]
+
+[ext_resource type="Texture2D" uid="uid://crl3kj68yuk1n" path="res://assets/Paintings/water_pump.png" id="1_o6oq5"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ks5bp"]
 radial_segments = 24
@@ -7,6 +9,9 @@ radial_segments = 24
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_v4ke5"]
 radial_segments = 24
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v4ke5"]
+size = Vector3(1.1782227, 2.225586, 1.2000732)
 
 [node name="hot_water_system" type="Node3D"]
 
@@ -29,3 +34,14 @@ mesh = SubResource("BoxMesh_o6oq5")
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.11207836, 0, 0, 0, -2.8417494e-08, -0.11207836, 0, 0.6501165, -4.899101e-09, -0.509545, 0.986912, -0.7679803)
 mesh = SubResource("CylinderMesh_v4ke5")
+
+[node name="Decal" type="Decal" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0.60978407, 1.0532417, -0.025691118)
+size = Vector3(1.5201416, 1.090332, 0.9933777)
+texture_albedo = ExtResource("1_o6oq5")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.016357422, 0.99853516, 0.012145996)
+shape = SubResource("BoxShape3D_v4ke5")
