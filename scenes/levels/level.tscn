@@ -32,7 +32,7 @@ background_mode = 2
 sky = SubResource("Sky_b2cq8")
 ambient_light_source = 2
 reflected_light_source = 2
-tonemap_mode = 2
+tonemap_mode = 3
 glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ftxyw"]

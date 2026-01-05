@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://blw0jt75nvbgg"]
+
+[ext_resource type="PackedScene" uid="uid://crv7rgf6onelx" path="res://assets/Blender/Friidge/eod_fridge.glb" id="1_xiuqv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xiuqv"]
+size = Vector3(2.1992188, 5.0928345, 2.3526611)
+
+[node name="fridge" instance=ExtResource("1_xiuqv")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0107421875, 0.023040771, -0.11859131)
+shape = SubResource("BoxShape3D_xiuqv")
