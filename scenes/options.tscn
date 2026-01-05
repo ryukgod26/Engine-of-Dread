@@ -26,11 +26,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
-current_tab = 1
+current_tab = 0
 all_tabs_in_front = true
 
 [node name="Video" type="VBoxContainer" parent="TabContainer"]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -65,6 +64,7 @@ popup/item_1/text = "Windowed"
 popup/item_1/id = 1
 
 [node name="Audio" type="VBoxContainer" parent="TabContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 9
 metadata/_tab_index = 1

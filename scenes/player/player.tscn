@@ -29,7 +29,7 @@ target_position = Vector3(0, -1.5, 0)
 script = ExtResource("3_gmlin")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="head"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.692, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.030684948, 0)
 light_energy = 5.0
 light_indirect_energy = 5.0
 light_volumetric_fog_energy = 5.0

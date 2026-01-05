@@ -19,5 +19,4 @@ func toggle_light():
 		$lamp_head.material_override = on_mat
 	else:
 		$lamp_head.material_override = off_mat
-	$OmniLight3D.visible = on
- 
+	$OmniLight3D.visible = on 

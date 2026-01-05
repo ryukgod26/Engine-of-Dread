@@ -2,10 +2,10 @@ extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
-@onready var spot_light: SpotLight3D = $SpotLight3D
+@onready var spot_light: SpotLight3D = $head/SpotLight3D
 
 func _ready() -> void:
-	$SpotLight3D.visible = false
+	$head/SpotLight3D.visible = false
 
 func _physics_process(delta: float) -> void:
 	
