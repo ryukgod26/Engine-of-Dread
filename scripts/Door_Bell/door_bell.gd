@@ -12,3 +12,5 @@ func interact():
 		$AnimationPlayer.play("press")
 		if times_rung > 2 :
 			door.locked = false
+			await get_tree().create_timer(3).timeout
+			Globals.TaskUI.add_new_task("Enter The House")

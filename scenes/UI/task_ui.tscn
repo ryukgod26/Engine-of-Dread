@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5k8d62s6drnd"]
+
+[ext_resource type="Script" uid="uid://bc64s1g84reg4" path="res://scripts/UI/task_ui.gd" id="1_elu8i"]
+
+[node name="TaskUI" type="CanvasLayer"]
+script = ExtResource("1_elu8i")
+
+[node name="TaskContainer" type="VBoxContainer" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -374.0
+offset_bottom = 133.0
+grow_horizontal = 0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TaskContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 30
+text = ":Task"
+fit_content = true
+text_direction = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="TaskText" type="RichTextLabel" parent="TaskContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 22
+text = "Sample Task "
+fit_content = true
+text_direction = 2
+metadata/_edit_use_anchors_ = true
