@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://t3ofn6wr10k1"]
+[gd_scene load_steps=42 format=3 uid="uid://t3ofn6wr10k1"]
 
 [ext_resource type="PackedScene" uid="uid://dbrgf4ik0o8ee" path="res://assets/Blender/House/ghost_house.glb" id="1_r1k68"]
 [ext_resource type="Material" uid="uid://bdq5qovyvusy2" path="res://materials/house_material.tres" id="2_xb27d"]
@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://cbovud832nwyu" path="res://scenes/Models/powerbox.tscn" id="27_x6wnh"]
 [ext_resource type="PackedScene" uid="uid://blw0jt75nvbgg" path="res://scenes/Models/fridge.tscn" id="28_m8smo"]
 [ext_resource type="PackedScene" uid="uid://djxjyio6y6nfj" path="res://scenes/Models/crate.tscn" id="29_xpxju"]
+[ext_resource type="PackedScene" uid="uid://c05je1aow1ykf" path="res://scenes/Models/blood_decal.tscn" id="31_w3d8j"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_r1k68"]
 data = PackedVector3Array(-1, -0.2911, 0.2663, -1, 1, 1, -1, -1, 1, -1, -1, 1, -1, -0.9924, 0.2663, -1, -0.2911, 0.2663, -1, -0.2911, -0.22039999, -1, 1, 1, -1, -0.2911, 0.2663, -1, -0.9924, 0.2663, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -0.2911, -0.22039999, -1, -1, -1, -1, 1, 1, -1, -1, -1, -1, 1, -1, -1, -0.9924, 0.2663, -1, -1, -1, -1, -0.9924, -0.22039999, -1, -1, -1, -1, -0.2911, -0.22039999, -1, -0.9924, -0.22039999, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -0.95919997, -1, -0.9468, 1, -1, -1, -1, -1, -1, 0.95919997, -1, -0.9468, 1, -1, -1, -0.95919997, -1, -0.9468, -1, -1, -1, -0.95919997, -1, 0.9468, -0.95919997, -1, -0.9468, 1, -1, -1, 0.95919997, -1, -0.9468, 0.95919997, -1, 0.9468, -1, -1, 1, -0.95919997, -1, 0.9468, -1, -1, -1, 1, -1, -1, 0.95919997, -1, 0.9468, 1, -1, 1, -0.95919997, -1, 0.9468, -1, -1, 1, 1, -1, 1, -0.95919997, -1, 0.9468, 1, -1, 1, 0.95919997, -1, 0.9468, 1, 1, 1, 0.95919997, 1, -0.9468, 1, 1, -1, -0.95919997, 1, -0.9468, 1, 1, -1, 0.95919997, 1, -0.9468, 1, 1, 1, 0.95919997, 1, 0.9468, 0.95919997, 1, -0.9468, -0.95919997, 1, -0.9468, -1, 1, -1, 1, 1, -1, 0.95919997, 1, 0.9468, 1, 1, 1, -1, 1, 1, -1, 1, -1, -0.95919997, 1, -0.9468, -0.95919997, 1, 0.9468, 0.95919997, 1, 0.9468, -1, 1, 1, -0.95919997, 1, 0.9468, -1, 1, -1, -0.95919997, 1, 0.9468, -1, 1, 1, 0.95919997, -1, 0.9468, 0.95919997, 1, -0.9468, 0.95919997, 1, 0.9468, 0.95919997, -1, 0.9468, 0.95919997, -1, -0.9468, 0.95919997, 1, -0.9468, 0.95919997, -1, -0.9468, -0.95919997, 1, -0.9468, 0.95919997, 1, -0.9468, 0.95919997, -1, -0.9468, -0.95919997, -1, -0.9468, -0.95919997, 1, -0.9468, -0.95919997, -0.2911, -0.22039999, -0.95919997, 1, -0.9468, -0.95919997, -1, -0.9468, -0.95919997, -1, -0.9468, -0.95919997, -0.9924, -0.22039999, -0.95919997, -0.2911, -0.22039999, -0.95919997, -0.2911, 0.2663, -0.95919997, 1, -0.9468, -0.95919997, -0.2911, -0.22039999, -0.95919997, -0.9924, -0.22039999, -0.95919997, -1, -0.9468, -0.95919997, -1, 0.9468, -0.95919997, 1, -0.9468, -0.95919997, -0.2911, 0.2663, -0.95919997, -1, 0.9468, -0.95919997, 1, -0.9468, -0.95919997, -1, 0.9468, -0.95919997, 1, 0.9468, -0.95919997, -0.9924, -0.22039999, -0.95919997, -1, 0.9468, -0.95919997, -0.9924, 0.2663, -0.95919997, -1, 0.9468, -0.95919997, -0.2911, 0.2663, -0.95919997, -0.9924, 0.2663, -0.95919997, -1, 0.9468, 0.95919997, 1, 0.9468, -0.95919997, 1, 0.9468, -0.95919997, -1, 0.9468, 0.95919997, -1, 0.9468, 0.95919997, 1, 0.9468, -1, -0.9924, -0.22039999, -0.95919997, -0.2911, -0.22039999, -0.95919997, -0.9924, -0.22039999, -1, -0.9924, -0.22039999, -1, -0.2911, -0.22039999, -0.95919997, -0.2911, -0.22039999, -1, -0.9924, 0.2663, -0.95919997, -0.9924, -0.22039999, -0.95919997, -0.9924, 0.2663, -1, -0.9924, 0.2663, -1, -0.9924, -0.22039999, -0.95919997, -0.9924, -0.22039999, -0.95919997, -0.9924, 0.2663, -1, -0.2911, 0.2663, -1, -0.9924, 0.2663, -0.95919997, -0.9924, 0.2663, -0.95919997, -0.2911, 0.2663, -1, -0.2911, 0.2663, -0.95919997, -0.2911, 0.2663, -1, -0.2911, -0.22039999, -1, -0.2911, 0.2663, -0.95919997, -0.2911, 0.2663, -0.95919997, -0.2911, -0.22039999, -1, -0.2911, -0.22039999)
@@ -220,10 +221,10 @@ transform = Transform3D(-0.6000001, 0, 0, 0, 2.3369062, 0, -2.9802322e-08, 0, -2
 transform = Transform3D(1, 0, 0, 0, 2.8101318, 0, 0, 0, 3.4762404, -3.4004276, -0.7963406, 21.30936)
 
 [node name="Door7" parent="Doors" index="5" instance=ExtResource("16_f1gs6")]
-transform = Transform3D(1, 0, 0, 0, 3.996186, 0, 0, 0, 4.027293, -17.663189, 1.1561383, -16.792261)
+transform = Transform3D(1, 0, 0, 0, 3.996186, 0, 0, 0, 4.027293, -18.228504, 1.1561383, -16.792261)
 
 [node name="door_bell" parent="Doors/Door7" index="2" node_paths=PackedStringArray("door") instance=ExtResource("17_rrsxy")]
-transform = Transform3D(-2.6403766e-08, 0, -0.6040478, 0, 0.6040477, 0, 0.6040478, 0, -2.6403766e-08, -0.91965866, -0.034046292, 0.88221073)
+transform = Transform3D(-2.6403766e-08, 0, -0.6040478, 0, 0.6040477, 0, 0.6040478, 0, -2.6403766e-08, -0.43440437, -0.034046292, 0.88221025)
 door = NodePath("..")
 
 [node name="Door3" parent="Doors" index="6" instance=ExtResource("16_f1gs6")]
@@ -379,20 +380,94 @@ transform = Transform3D(0.3100958, 0.010154686, -0.95065117, -3.9485912e-10, 0.9
 [node name="crate7" parent="Crates" index="8" instance=ExtResource("29_xpxju")]
 transform = Transform3D(0.9991112, 0.0004502628, -0.042152286, -3.657811e-10, 0.9999431, 0.010681214, 0.0421547, -0.010671719, 0.9990542, -17.707563, -12.0474, 14.787135)
 
-[node name="crate12" parent="Crates" index="9" instance=ExtResource("29_xpxju")]
+[node name="crate16" parent="Crates" index="9" instance=ExtResource("29_xpxju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.568192, -12.029745, 3.878014)
+
+[node name="crate17" parent="Crates" index="10" instance=ExtResource("29_xpxju")]
+transform = Transform3D(0.9991112, 0.0004502628, -0.042152286, -3.657811e-10, 0.9999431, 0.010681214, 0.0421547, -0.010671719, 0.9990542, -16.32341, -12.0474, 3.878014)
+
+[node name="crate18" parent="Crates" index="11" instance=ExtResource("29_xpxju")]
+transform = Transform3D(0.3100958, 0.010154686, -0.95065117, -3.9485912e-10, 0.9999432, 0.010681215, 0.9507055, -0.0033122003, 0.3100781, -14.969071, -12.0474, 3.6030993)
+
+[node name="crate19" parent="Crates" index="12" instance=ExtResource("29_xpxju")]
+transform = Transform3D(0.9991112, 0.0004502628, -0.042152286, -3.657811e-10, 0.9999431, 0.010681214, 0.0421547, -0.010671719, 0.9990542, -17.707563, -12.0474, 4.9498343)
+
+[node name="crate20" parent="Crates" index="13" instance=ExtResource("29_xpxju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.568192, -12.029745, 10.452816)
+
+[node name="crate21" parent="Crates" index="14" instance=ExtResource("29_xpxju")]
+transform = Transform3D(0.9991112, 0.0004502628, -0.042152286, -3.657811e-10, 0.9999431, 0.010681214, 0.0421547, -0.010671719, 0.9990542, -17.707563, -12.0474, 11.524637)
+
+[node name="crate24" parent="Crates" index="15" instance=ExtResource("29_xpxju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.330725, -11.057256, 10.452816)
+
+[node name="crate25" parent="Crates" index="16" instance=ExtResource("29_xpxju")]
+transform = Transform3D(0.9991112, 0.0004502628, -0.042152286, -3.657811e-10, 0.9999431, 0.010681214, 0.0421547, -0.010671719, 0.9990542, -17.470097, -11.074911, 11.524637)
+
+[node name="crate26" parent="Crates" index="17" instance=ExtResource("29_xpxju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.094727, -12.029745, 10.452816)
+
+[node name="crate27" parent="Crates" index="18" instance=ExtResource("29_xpxju")]
+transform = Transform3D(0.9991112, 0.0004502628, -0.042152286, -3.657811e-10, 0.9999431, 0.010681214, 0.0421547, -0.010671719, 0.9990542, -16.234097, -12.0474, 11.524637)
+
+[node name="crate28" parent="Crates" index="19" instance=ExtResource("29_xpxju")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.857259, -11.057256, 10.452816)
+
+[node name="crate29" parent="Crates" index="20" instance=ExtResource("29_xpxju")]
+transform = Transform3D(0.9991112, 0.0004502628, -0.042152286, -3.657811e-10, 0.9999431, 0.010681214, 0.0421547, -0.010671719, 0.9990542, -15.996631, -11.074911, 11.524637)
+
+[node name="crate30" parent="Crates" index="21" instance=ExtResource("29_xpxju")]
+transform = Transform3D(1.4556681, 0, 0, 0, 1.4556681, 0, 0, 0, 1.4556681, -11.3969755, -11.854957, 10.172638)
+
+[node name="crate31" parent="Crates" index="22" instance=ExtResource("29_xpxju")]
+transform = Transform3D(1.4543743, 0.00065543316, -0.061359737, -5.3245586e-10, 1.4555852, 0.015548302, 0.06136325, -0.015534481, 1.4542913, -11.599853, -11.880657, 11.732854)
+
+[node name="crate34" parent="Crates" index="23" instance=ExtResource("29_xpxju")]
+transform = Transform3D(1.4556681, 0, 0, 0, 1.4556681, 0, 0, 0, 1.4556681, -11.3969755, -11.854957, 4.2409225)
+
+[node name="crate35" parent="Crates" index="24" instance=ExtResource("29_xpxju")]
+transform = Transform3D(1.4543743, 0.00065543316, -0.061359737, -5.3245586e-10, 1.4555852, 0.015548302, 0.06136325, -0.015534481, 1.4542913, -11.599853, -11.880657, 5.8011384)
+
+[node name="crate32" parent="Crates" index="25" instance=ExtResource("29_xpxju")]
+transform = Transform3D(1.4556681, 0, 0, 0, 1.4556681, 0, 0, 0, 1.4556681, -11.051302, -10.439335, 10.172638)
+
+[node name="crate33" parent="Crates" index="26" instance=ExtResource("29_xpxju")]
+transform = Transform3D(1.4543743, 0.00065543316, -0.061359737, -5.3245586e-10, 1.4555852, 0.015548302, 0.06136325, -0.015534481, 1.4542913, -11.254181, -10.465035, 11.732854)
+
+[node name="crate22" parent="Crates" index="27" instance=ExtResource("29_xpxju")]
+transform = Transform3D(0.95111585, 0, -0.3088344, 0, 1, 0, 0.3088344, 0, 0.95111585, -16.681484, -12.029745, 7.4780717)
+
+[node name="crate23" parent="Crates" index="28" instance=ExtResource("29_xpxju")]
+transform = Transform3D(0.9372516, 0.003724046, -0.348634, -3.9485912e-10, 0.9999432, 0.010681215, 0.34865394, -0.010010987, 0.93719834, -17.145061, -12.0474, 8.454454)
+
+[node name="crate12" parent="Crates" index="29" instance=ExtResource("29_xpxju")]
 transform = Transform3D(0.54830784, 0.008932448, -0.83622897, -3.9485912e-10, 0.9999432, 0.010681215, 0.83627677, -0.005856594, 0.54827666, -17.707563, -11.011045, 14.787135)
 
-[node name="crate13" parent="Crates" index="10" instance=ExtResource("29_xpxju")]
+[node name="crate13" parent="Crates" index="30" instance=ExtResource("29_xpxju")]
 transform = Transform3D(1.0000001, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000001, -9.284766, -12.068997, -19.308037)
 
-[node name="crate14" parent="Crates" index="11" instance=ExtResource("29_xpxju")]
+[node name="crate14" parent="Crates" index="31" instance=ExtResource("29_xpxju")]
 transform = Transform3D(1.0000001, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000001, -10.377644, -12.068997, -19.308037)
 
-[node name="crate15" parent="Crates" index="12" instance=ExtResource("29_xpxju")]
+[node name="crate15" parent="Crates" index="32" instance=ExtResource("29_xpxju")]
 transform = Transform3D(1.0000001, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000001, -9.750204, -10.966704, -19.308037)
 
-[node name="crate9" parent="Crates" index="13" instance=ExtResource("29_xpxju")]
+[node name="crate9" parent="Crates" index="33" instance=ExtResource("29_xpxju")]
 transform = Transform3D(1.016599, 0.0013173997, -0.060873345, -3.7218356e-10, 2.9256797, 0.0154250525, 0.042892553, -0.031223811, 1.4427633, -17.707563, -11.078289, 20.295267)
 
-[node name="crate8" parent="Crates" index="14" instance=ExtResource("29_xpxju")]
+[node name="crate8" parent="Crates" index="34" instance=ExtResource("29_xpxju")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.639435, 0.388736, -26.72661)
+
+[node name="BloodDecals" type="Node3D" parent="." index="30"]
+
+[node name="blood_decal" parent="BloodDecals" index="0" instance=ExtResource("31_w3d8j")]
+transform = Transform3D(0.93887806, 0, 0.34424976, 0, 1, 0, -0.34424976, 0, 0.93887806, -10.860031, -12.680987, 8.875303)
+
+[node name="blood_decal2" parent="BloodDecals" index="1" instance=ExtResource("31_w3d8j")]
+transform = Transform3D(0.93887806, 0, 0.34424976, 0, 1, 0, -0.34424976, 0, 0.93887806, -16.0409, -12.680987, 8.875303)
+
+[node name="blood_decal3" parent="BloodDecals" index="2" instance=ExtResource("31_w3d8j")]
+transform = Transform3D(0.93887806, 0, 0.34424976, 0, 1, 0, -0.34424976, 0, 0.93887806, -16.730444, -12.680987, 2.3088973)
+
+[node name="blood_decal4" parent="BloodDecals" index="3" instance=ExtResource("31_w3d8j")]
+transform = Transform3D(0.93887806, 0, 0.34424976, 0, 1, 0, -0.34424976, 0, 0.93887806, -13.4292, -12.680987, 12.276828)

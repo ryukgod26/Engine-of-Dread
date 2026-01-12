@@ -13,21 +13,6 @@ albedo_color = Color(0.21950102, 0.21950102, 0.21950102, 1)
 [sub_resource type="BoxShape3D" id="BoxShape3D_xue5k"]
 size = Vector3(0.47607422, 0.72839355, 0.40875244)
 
-[sub_resource type="Animation" id="Animation_xue5k"]
-resource_name = "press"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MeshInstance3D2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0.1981591), Vector3(0, 0, 0.094132155), Vector3(0, 0, 0.1981591)]
-}
-
 [sub_resource type="Animation" id="Animation_ppvxf"]
 length = 0.001
 tracks/0/type = "value"
@@ -41,6 +26,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector3(0, 0, 0.1981591)]
+}
+
+[sub_resource type="Animation" id="Animation_xue5k"]
+resource_name = "press"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0.1981591), Vector3(0, 0, 0.094132155), Vector3(0, 0, 0.1981591)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ppvxf"]
@@ -61,7 +61,7 @@ transform = Transform3D(0.3, 0, 0, 0, 0.46989956, 0, 0, 0, 0.13721828, 0, 0, 0.1
 material_override = SubResource("StandardMaterial3D_xue5k")
 mesh = SubResource("BoxMesh_ppvxf")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." node_paths=PackedStringArray("door")]
+[node name="StaticBody3D" type="StaticBody3D" parent="." node_paths=PackedStringArray("door") groups=["interectable"]]
 script = ExtResource("2_bni87")
 door = NodePath("..")
 

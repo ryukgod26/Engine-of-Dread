@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c05je1aow1ykf"]
+
+[ext_resource type="Texture2D" uid="uid://bgdj2or2pwy8n" path="res://assets/Images/blood_trexture.png" id="1_p4xgv"]
+
+[node name="blood_decal" type="Decal"]
+texture_albedo = ExtResource("1_p4xgv")

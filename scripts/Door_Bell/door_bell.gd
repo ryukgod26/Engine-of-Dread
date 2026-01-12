@@ -7,7 +7,7 @@ func _ready() -> void:
 	door.locked = true
 
 func interact():
-	if $AnimationPlayer.current_animation != "press" and times_rung < 2:
+	if $AnimationPlayer.current_animation != "press" and times_rung < 3:
 		times_rung += 1
 		$AnimationPlayer.play("press")
 		if times_rung > 2 :
