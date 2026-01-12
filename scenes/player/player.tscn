@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c0xgod0vl6673" path="res://scenes/UI/ui.tscn" id="4_lvxji"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
+radius = 0.3
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3vyb7"]
 

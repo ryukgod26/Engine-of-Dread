@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://t3ofn6wr10k1"]
+[gd_scene load_steps=41 format=3 uid="uid://t3ofn6wr10k1"]
 
 [ext_resource type="PackedScene" uid="uid://dbrgf4ik0o8ee" path="res://assets/Blender/House/ghost_house.glb" id="1_r1k68"]
 [ext_resource type="Material" uid="uid://bdq5qovyvusy2" path="res://materials/house_material.tres" id="2_xb27d"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://btj6wicknvs2" path="res://scenes/Models/ghost_bed.tscn" id="15_b66xr"]
 [ext_resource type="PackedScene" uid="uid://dp1n7y60ci8al" path="res://scenes/Models/door.tscn" id="16_f1gs6"]
 [ext_resource type="PackedScene" uid="uid://cr4kxn31cwkon" path="res://scenes/Models/light_bulb.tscn" id="17_api4n"]
+[ext_resource type="PackedScene" uid="uid://wpe2venifrek" path="res://scenes/Models/door_bell.tscn" id="17_rrsxy"]
 [ext_resource type="PackedScene" uid="uid://hx68qv6jqufc" path="res://scenes/Models/light_switch.tscn" id="18_mmnm8"]
 [ext_resource type="PackedScene" uid="uid://b60o76n5yl0gf" path="res://scenes/Models/lamp.tscn" id="19_cgqv1"]
 [ext_resource type="PackedScene" uid="uid://v6yg6yocle5q" path="res://scenes/Models/toilet.tscn" id="20_ahspy"]
@@ -218,7 +219,14 @@ transform = Transform3D(-0.6000001, 0, 0, 0, 2.3369062, 0, -2.9802322e-08, 0, -2
 [node name="Door2" parent="Doors" index="4" instance=ExtResource("16_f1gs6")]
 transform = Transform3D(1, 0, 0, 0, 2.8101318, 0, 0, 0, 3.4762404, -3.4004276, -0.7963406, 21.30936)
 
-[node name="Door3" parent="Doors" index="5" instance=ExtResource("16_f1gs6")]
+[node name="Door7" parent="Doors" index="5" instance=ExtResource("16_f1gs6")]
+transform = Transform3D(1, 0, 0, 0, 3.996186, 0, 0, 0, 4.027293, -17.663189, 1.1561383, -16.792261)
+
+[node name="door_bell" parent="Doors/Door7" index="2" node_paths=PackedStringArray("door") instance=ExtResource("17_rrsxy")]
+transform = Transform3D(-2.6403766e-08, 0, -0.6040478, 0, 0.6040477, 0, 0.6040478, 0, -2.6403766e-08, -0.91965866, -0.034046292, 0.88221073)
+door = NodePath("..")
+
+[node name="Door3" parent="Doors" index="6" instance=ExtResource("16_f1gs6")]
 transform = Transform3D(1, 0, 0, 0, 2.44088, 0, 0, 0, 2.4182158, 5.7175636, -0.22746092, 21.551125)
 
 [node name="Light_Bulbs" type="Node3D" parent="." index="20"]
