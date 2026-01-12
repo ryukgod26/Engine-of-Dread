@@ -127,7 +127,7 @@ transform = Transform3D(-2.6882502e-08, 0, -0.61499995, 0, 0.6149999, 0, 0.61499
 [node name="Drawers" type="Node3D" parent="." index="9"]
 
 [node name="ghost_drawer2" parent="Drawers" index="0" instance=ExtResource("7_oh1pv")]
-transform = Transform3D(0.999999, 0, 2.3283064e-09, 0, 0.9999993, 0, -2.3283064e-09, 0, 0.999999, -16.406507, -1.3570666, 7.3307047)
+transform = Transform3D(0.5171247, 0, 1.2040259e-09, 0, 0.51712483, 0, -1.2040259e-09, 0, 0.5171247, -16.367815, -1.9586575, 7.299438)
 
 [node name="ghost_drawer3" parent="Drawers" index="1" instance=ExtResource("7_oh1pv")]
 transform = Transform3D(-4.3711342e-08, 0, -0.9999989, 0, 0.9999993, 0, 0.9999989, 0, -4.3711342e-08, -8.10401, -1.1711345, -27.08259)
@@ -282,7 +282,7 @@ light_bulb = NodePath("../../Light_Bulbs/light_bulb10")
 [node name="Lamps" type="Node3D" parent="." index="22"]
 
 [node name="lamp" parent="Lamps" index="0" instance=ExtResource("19_cgqv1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 1.8000001, 5)
+transform = Transform3D(0.8096375, 0, 0, 0, 0.8096375, 0, 0, 0, 0.8096375, -16.038692, 0.21548241, 7.0334773)
 
 [node name="Toilets" type="Node3D" parent="." index="23"]
 

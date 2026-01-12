@@ -1,4 +1,7 @@
-[gd_scene load_steps=29 format=4 uid="uid://6ovsedqhwocd"]
+[gd_scene load_steps=36 format=4 uid="uid://6ovsedqhwocd"]
+
+[ext_resource type="Script" uid="uid://dtwln8jg3okct" path="res://scripts/Door/door.gd" id="1_k5khd"]
+[ext_resource type="Script" uid="uid://bm51n3mlhgprj" path="res://scripts/Door/door_static_body.gd" id="2_efbpt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2a5ty"]
 
@@ -63,6 +66,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_j3ilg")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_dsis1"]
+data = PackedVector3Array(-0.9526, -0.78779995, 0.9299, -0.9526, 1, -0.93219995, -0.9526, -0.78779995, -0.93219995, -0.9526, -0.78779995, 0.9299, -0.9526, 1, 0.9299, -0.9526, 1, -0.93219995, -0.9526, -0.78779995, -0.93219995, 0.8851, 1, -0.93219995, 0.8851, -0.78779995, -0.93219995, -0.9526, -0.78779995, -0.93219995, -0.9526, 1, -0.93219995, 0.8851, 1, -0.93219995, 0.8851, 1, -0.93219995, 0.8851, -0.78779995, 0.9299, 0.8851, -0.78779995, -0.93219995, 0.8851, -0.78779995, 0.9299, 0.8851, 1, -0.93219995, 0.8851, 1, 0.8851, 0.8851, -0.78779995, 0.9299, 0.8851, 1, 0.8851, 0.8851, 1, 0.9299, 0.8851, -0.78779995, 0.9299, -0.9526, 1, 0.9299, -0.9526, -0.78779995, 0.9299, 0.8851, -0.78779995, 0.9299, 0.8851, 1, 0.9299, -0.9526, 1, 0.9299, -0.9526, -0.78779995, -0.93219995, 0.8851, -0.78779995, 0.9299, -0.9526, -0.78779995, 0.9299, -0.9526, -0.78779995, -0.93219995, 0.8851, -0.78779995, -0.93219995, 0.8851, -0.78779995, 0.9299, -1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, -1, 1, -1, 1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, -1, 1, -1, 1, -1, -0.9526, 1, 0.9299, -1, 1, 1, 0.8851, 1, 0.9299, -1, 1, 1, -0.9526, 1, 0.9299, -1, 1, -1, -0.9526, 1, -0.93219995, -0.9526, 1, 0.9299, 1, 1, 1, -1, 1, 1, 0.8851, 1, 0.9299, -1, 1, -1, 0.8851, 1, -0.93219995, -0.9526, 1, -0.93219995, 1, 1, 1, 0.8851, 1, 0.9299, 0.8851, 1, 0.8851, 1, 1, -1, 0.8851, 1, -0.93219995, -1, 1, -1, 0.8851, 1, 0.8851, 1, 1, -1, 1, 1, 1, 0.8851, 1, -0.93219995, 1, 1, -1, 0.8851, 1, 0.8851)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_582fv"]
 
@@ -131,6 +137,27 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_cfwhd")
+
+[sub_resource type="Animation" id="Animation_dsis1"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1.5, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a728w"]
+_data = {
+&"open": SubResource("Animation_dsis1")
+}
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6p75p"]
 
@@ -296,8 +323,29 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_l23vp")
 
+[sub_resource type="Animation" id="Animation_a728w"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1.5, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bis6u"]
+_data = {
+&"open": SubResource("Animation_a728w")
+}
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_dsis1"]
-size = Vector3(2.2906342, 3.4808807, 8.127319)
+size = Vector3(1.9930954, 3.4808807, 8.127319)
 
 [node name="ghost_drawer" type="Node3D"]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
@@ -308,11 +356,19 @@ mesh = SubResource("ArrayMesh_fun5s")
 skeleton = NodePath("")
 
 [node name="Drawer1" type="Node3D" parent="."]
+script = ExtResource("1_k5khd")
 
 [node name="Cube_004" type="MeshInstance3D" parent="Drawer1"]
 transform = Transform3D(0.9662126, 0, 0, 0, 0.5713373, 0, 0, 0, 1.3687873, 0.039710507, 0.282845, 2.1539602)
 mesh = SubResource("ArrayMesh_s5ti2")
 skeleton = NodePath("")
+
+[node name="drawer" type="StaticBody3D" parent="Drawer1/Cube_004" node_paths=PackedStringArray("door") groups=["interectable"]]
+script = ExtResource("2_efbpt")
+door = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer1/Cube_004/drawer"]
+shape = SubResource("ConcavePolygonShape3D_dsis1")
 
 [node name="Cylinder" type="MeshInstance3D" parent="Drawer1"]
 transform = Transform3D(0, 0.16564237, 0, -0.19537586, 0, 0, 0, 0, 0.19537586, 1.1921386, 0.23226474, 2.2195666)
@@ -323,6 +379,11 @@ skeleton = NodePath("")
 transform = Transform3D(0, -0.021018496, 0, -0.23807593, 0, 0, 0, 0, 0.23807593, 1.3831048, 0.23226474, 2.2195666)
 mesh = SubResource("ArrayMesh_dnvfu")
 skeleton = NodePath("")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Drawer1"]
+libraries = {
+&"": SubResource("AnimationLibrary_a728w")
+}
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.940131, 0, 0, 0, 0.70747894, 0, 0, 0, 0.21073313, 0, -1.5298995, 3.8001518)
@@ -335,6 +396,14 @@ mesh = SubResource("ArrayMesh_pi6fb")
 skeleton = NodePath("")
 
 [node name="Drawer2" type="Node3D" parent="."]
+script = ExtResource("1_k5khd")
+
+[node name="drawer" type="StaticBody3D" parent="Drawer2" node_paths=PackedStringArray("door") groups=["interectable"]]
+script = ExtResource("2_efbpt")
+door = NodePath("..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Drawer2/drawer"]
+shape = SubResource("ConcavePolygonShape3D_dsis1")
 
 [node name="Cube_002" type="MeshInstance3D" parent="Drawer2"]
 transform = Transform3D(0.9662126, 0, 0, 0, 0.5713373, 0, 0, 0, 1.3687873, 0.039706513, 0.2828447, -2.1454687)
@@ -351,8 +420,13 @@ transform = Transform3D(0, -0.021018496, 0, -0.23807593, 0, 0, 0, 0, 0.23807593,
 mesh = SubResource("ArrayMesh_41js4")
 skeleton = NodePath("")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Drawer2"]
+libraries = {
+&"": SubResource("AnimationLibrary_bis6u")
+}
+
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05521393, -0.49700165, 0.010803223)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20398332, -0.49700168, 0.010803223)
 shape = SubResource("BoxShape3D_dsis1")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dp1n7y60ci8al"]
+[gd_scene load_steps=9 format=3 uid="uid://dp1n7y60ci8al"]
 
 [ext_resource type="Script" uid="uid://dtwln8jg3okct" path="res://scripts/Door/door.gd" id="1_mkop7"]
 [ext_resource type="Script" uid="uid://bm51n3mlhgprj" path="res://scripts/Door/door_static_body.gd" id="2_80xhl"]
@@ -10,36 +10,6 @@
 [sub_resource type="CylinderMesh" id="CylinderMesh_vtrdk"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_mkop7"]
-
-[sub_resource type="Animation" id="Animation_y28kw"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_vmto4"]
-resource_name = "close"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Hinge:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, -1.5707964, 0), Vector3(0, 0, 0)]
-}
 
 [sub_resource type="Animation" id="Animation_80xhl"]
 resource_name = "open"
@@ -58,8 +28,6 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ff5hl"]
 _data = {
-&"RESET": SubResource("Animation_y28kw"),
-&"close": SubResource("Animation_vmto4"),
 &"open": SubResource("Animation_80xhl")
 }
 
