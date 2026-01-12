@@ -11,6 +11,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_suays")
 dot_radius = 5.0
+dot_color = Color(1, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
