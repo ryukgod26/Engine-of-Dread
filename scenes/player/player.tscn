@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://duim56isk7074"]
+[gd_scene load_steps=7 format=3 uid="uid://duim56isk7074"]
 
 [ext_resource type="Script" uid="uid://cdkt6wutxxaar" path="res://scripts/Player/player.gd" id="1_8afob"]
 [ext_resource type="Script" uid="uid://cxxp325sqxxfe" path="res://scripts/Player/player_head.gd" id="2_dovo2"]
 [ext_resource type="Script" uid="uid://c348sm2afj02d" path="res://scripts/Player/player_interact.gd" id="3_gmlin"]
+[ext_resource type="PackedScene" uid="uid://c0xgod0vl6673" path="res://scenes/UI/ui.tscn" id="4_lvxji"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
@@ -35,3 +36,5 @@ light_indirect_energy = 5.0
 light_volumetric_fog_energy = 5.0
 shadow_enabled = true
 spot_range = 15.0
+
+[node name="UI" parent="." instance=ExtResource("4_lvxji")]
