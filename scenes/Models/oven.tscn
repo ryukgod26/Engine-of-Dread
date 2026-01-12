@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcefv64hmffpn"]
+
+[ext_resource type="PackedScene" uid="uid://c4svapc30hpe" path="res://assets/Blender/Oven/eod_oven.glb" id="1_tttop"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tttop"]
+size = Vector3(2.0286255, 2.085608, 2.3908691)
+
+[node name="oven" instance=ExtResource("1_tttop")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="16"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00064086914, 0.02684927, -0.1595459)
+shape = SubResource("BoxShape3D_tttop")
