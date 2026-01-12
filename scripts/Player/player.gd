@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED = 5.0
+var SPEED = 3.5
 const JUMP_VELOCITY = 4.5
 @onready var spot_light: SpotLight3D = $head/SpotLight3D
 var crouching := false
@@ -11,6 +11,10 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("crouch"):
 		crouching = not crouching
+		if crouching:
+			SPEED = 1.5
+		if not crouching:
+			SPEED = 3.5
 
 func _physics_process(delta: float) -> void:
 	if crouching and $CollisionShape3D.shape.height > 0.25:
