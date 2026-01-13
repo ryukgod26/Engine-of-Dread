@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://drdl4wbx6falg"]
+[gd_scene load_steps=15 format=3 uid="uid://drdl4wbx6falg"]
 
 [ext_resource type="Texture2D" uid="uid://5lfan064dcru" path="res://assets/floor/close-up-concrete-wall-with-crack.jpg" id="1_377w7"]
 [ext_resource type="PackedScene" uid="uid://duim56isk7074" path="res://scenes/player/player.tscn" id="1_bovvr"]
 [ext_resource type="PackedScene" uid="uid://liicmwhiq8ih" path="res://scenes/house.tscn" id="3_b2cq8"]
+[ext_resource type="PackedScene" uid="uid://crsjb6egbxngf" path="res://scenes/Models/task_trigger.tscn" id="5_d4w6o"]
 [ext_resource type="PackedScene" uid="uid://t3ofn6wr10k1" path="res://scenes/Models/ghost_house.tscn" id="5_urvlt"]
 
 [sub_resource type="Gradient" id="Gradient_b2cq8"]
@@ -71,3 +72,14 @@ visible = false
 
 [node name="ghost_house" parent="." instance=ExtResource("5_urvlt")]
 transform = Transform3D(-0.74578804, 0, 0.0035405648, 0, 0.74579644, 0, -0.0035405648, 0, -0.74578804, -20.006557, 2.4201953, -7.86073)
+
+[node name="TaskTriggers" type="Node3D" parent="."]
+
+[node name="TaskTrigger" parent="TaskTriggers" instance=ExtResource("5_d4w6o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.021671, 1.8074951, 3.1706734)
+task_text = "Find the Money"
+
+[node name="CollisionShape3D" parent="TaskTriggers/TaskTrigger" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1890049, 0.9880521, 1.4595337)
+
+[editable path="TaskTriggers/TaskTrigger"]
