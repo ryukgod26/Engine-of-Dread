@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://v8obesdrhybc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_hiaj6"]
+
+[node name="HouseNumber" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.19561648, 0, 0, 0, 0.6164169, 0, 0, 0, 0.8252712, 0, 0, 0)
+mesh = SubResource("BoxMesh_hiaj6")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(0.053521156, 0, 0.9985667, 0, 1, 0, -0.9985667, 0, 0.053521156, 0.108133614, 0, 0)
+text = "2626"
