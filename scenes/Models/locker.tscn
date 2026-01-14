@@ -1,5 +1,6 @@
-[gd_scene load_steps=19 format=4 uid="uid://cbfrk0mdrwnq5"]
+[gd_scene load_steps=20 format=4 uid="uid://cbfrk0mdrwnq5"]
 
+[ext_resource type="Material" path="res://assets/Materials/Metal052C_1K-JPG/Metal052C_1K-JPG.tres" id="1_geud6"]
 [ext_resource type="Script" uid="uid://ue4hdlsbmu7c" path="res://scripts/Locker/locker_static_body_gd.gd" id="2_geud6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mlhmo"]
@@ -182,6 +183,7 @@ _data = {
 [node name="locker" type="Node3D"]
 
 [node name="Cube" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_geud6")
 mesh = SubResource("ArrayMesh_emq4i")
 skeleton = NodePath("")
 
@@ -197,11 +199,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.94276416, 0.13938615, 0.99
 
 [node name="Cube_001" type="MeshInstance3D" parent="Hinge"]
 transform = Transform3D(0.93000317, 0, 0, 0, 0.93000317, 0, 0, 0, 0.09173161, 0.94276416, -0.13938615, 0.023170352)
+material_override = ExtResource("1_geud6")
 mesh = SubResource("ArrayMesh_jusk3")
 skeleton = NodePath("")
 
 [node name="Cube_002" type="MeshInstance3D" parent="Hinge"]
 transform = Transform3D(0.19558343, 0, 0, 0, 0.25158194, 0, 0, 0, 0.049800843, 1.6236595, -0.13938615, 0.15519857)
+material_override = ExtResource("1_geud6")
 mesh = SubResource("ArrayMesh_hjpt1")
 skeleton = NodePath("")
 

@@ -1,7 +1,10 @@
-[gd_scene load_steps=37 format=4 uid="uid://6ovsedqhwocd"]
+[gd_scene load_steps=40 format=4 uid="uid://6ovsedqhwocd"]
 
+[ext_resource type="Material" path="res://assets/Materials/Wood094_1K-JPG/Wood094_1K-JPG.tres" id="1_a728w"]
 [ext_resource type="Script" uid="uid://dtwln8jg3okct" path="res://scripts/Door/door.gd" id="1_k5khd"]
 [ext_resource type="Script" uid="uid://bm51n3mlhgprj" path="res://scripts/Door/door_static_body.gd" id="2_efbpt"]
+[ext_resource type="Material" uid="uid://hbw6k1txkboa" path="res://assets/Materials/WoodFloor013_1K-JPG/WoodFloor013_1K-JPG.tres" id="3_bis6u"]
+[ext_resource type="Material" path="res://assets/Materials/Metal052C_1K-JPG/Metal052C_1K-JPG.tres" id="5_qwy3x"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2a5ty"]
 
@@ -355,6 +358,7 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0, 0)
 
 [node name="Cube_003" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1.24697, 0, 0, 0, 4.05833, 0, 0, 0)
+material_override = ExtResource("1_a728w")
 mesh = SubResource("ArrayMesh_fun5s")
 skeleton = NodePath("")
 
@@ -363,6 +367,7 @@ script = ExtResource("1_k5khd")
 
 [node name="Cube_004" type="MeshInstance3D" parent="Drawer1"]
 transform = Transform3D(0.9662126, 0, 0, 0, 0.5713373, 0, 0, 0, 1.3687873, 0.039710507, 0.282845, 2.1539602)
+material_override = ExtResource("3_bis6u")
 mesh = SubResource("ArrayMesh_s5ti2")
 skeleton = NodePath("")
 
@@ -375,11 +380,13 @@ shape = SubResource("ConcavePolygonShape3D_dsis1")
 
 [node name="Cylinder" type="MeshInstance3D" parent="Drawer1"]
 transform = Transform3D(0, 0.16564237, 0, -0.19537586, 0, 0, 0, 0, 0.19537586, 1.1921386, 0.23226474, 2.2195666)
+material_override = ExtResource("5_qwy3x")
 mesh = SubResource("ArrayMesh_ruoj5")
 skeleton = NodePath("")
 
 [node name="Cylinder_001" type="MeshInstance3D" parent="Drawer1"]
 transform = Transform3D(0, -0.021018496, 0, -0.23807593, 0, 0, 0, 0, 0.23807593, 1.3831048, 0.23226474, 2.2195666)
+material_override = ExtResource("5_qwy3x")
 mesh = SubResource("ArrayMesh_dnvfu")
 skeleton = NodePath("")
 
@@ -390,11 +397,13 @@ libraries = {
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.940131, 0, 0, 0, 0.70747894, 0, 0, 0, 0.21073313, 0, -1.5298995, 3.8001518)
+material_override = ExtResource("1_a728w")
 mesh = SubResource("ArrayMesh_c008t")
 skeleton = NodePath("")
 
 [node name="Cube_001" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.940131, 0, 0, 0, 0.70747894, 0, 0, 0, 0.21073313, 0, -1.5298995, -3.7669048)
+material_override = ExtResource("1_a728w")
 mesh = SubResource("ArrayMesh_pi6fb")
 skeleton = NodePath("")
 
@@ -403,6 +412,7 @@ script = ExtResource("1_k5khd")
 
 [node name="Cube_002" type="MeshInstance3D" parent="Drawer2"]
 transform = Transform3D(0.9662126, 0, 0, 0, 0.5713373, 0, 0, 0, 1.3687873, 0.039706513, 0.2828447, -2.1454687)
+material_override = ExtResource("3_bis6u")
 mesh = SubResource("ArrayMesh_md4o7")
 skeleton = NodePath("")
 
@@ -415,11 +425,13 @@ shape = SubResource("ConcavePolygonShape3D_efbpt")
 
 [node name="Cylinder_002" type="MeshInstance3D" parent="Drawer2"]
 transform = Transform3D(0, 0.16564237, 0, -0.19537586, 0, 0, 0, 0, 0.19537586, 1.1921386, 0.23226474, -2.1427307)
+material_override = ExtResource("5_qwy3x")
 mesh = SubResource("ArrayMesh_4ocs5")
 skeleton = NodePath("")
 
 [node name="Cylinder_003" type="MeshInstance3D" parent="Drawer2"]
 transform = Transform3D(0, -0.021018496, 0, -0.23807593, 0, 0, 0, 0, 0.23807593, 1.3831048, 0.23226474, -2.1427307)
+material_override = ExtResource("5_qwy3x")
 mesh = SubResource("ArrayMesh_41js4")
 skeleton = NodePath("")
 

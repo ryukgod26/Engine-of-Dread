@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://djxjyio6y6nfj"]
+[gd_scene load_steps=4 format=3 uid="uid://djxjyio6y6nfj"]
+
+[ext_resource type="Material" path="res://assets/Materials/Planks033B_1K-JPG/Planks033B_1K-JPG.tres" id="1_sxjpm"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ys82y"]
 
@@ -8,6 +10,7 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [node name="crate" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = ExtResource("1_sxjpm")
 mesh = SubResource("BoxMesh_ys82y")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]

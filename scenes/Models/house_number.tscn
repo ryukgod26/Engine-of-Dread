@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://v8obesdrhybc"]
+[gd_scene load_steps=3 format=3 uid="uid://v8obesdrhybc"]
+
+[ext_resource type="Material" path="res://assets/Materials/Wood094_1K-JPG/Wood094_1K-JPG.tres" id="1_gks0t"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hiaj6"]
 
@@ -6,6 +8,7 @@
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.19561648, 0, 0, 0, 0.6164169, 0, 0, 0, 0.8252712, 0, 0, 0)
+material_override = ExtResource("1_gks0t")
 mesh = SubResource("BoxMesh_hiaj6")
 
 [node name="Label3D" type="Label3D" parent="."]

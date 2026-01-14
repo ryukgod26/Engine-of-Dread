@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://hx68qv6jqufc"]
+[gd_scene load_steps=8 format=3 uid="uid://hx68qv6jqufc"]
 
 [ext_resource type="Script" uid="uid://bt5awi2w65p8f" path="res://scripts/Light_Switch/light_switch.gd" id="1_ucciv"]
 [ext_resource type="Script" uid="uid://m5k852vl7pqc" path="res://scripts/Light_Switch/light_switch_static_body.gd" id="2_ejlpe"]
+[ext_resource type="Material" path="res://assets/Materials/Metal017_1K-JPG/Metal017_1K-JPG.tres" id="2_veyq7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucciv"]
 emission_enabled = true
@@ -23,10 +24,12 @@ off_mat = SubResource("StandardMaterial3D_ejlpe")
 
 [node name="light_switch_mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.55, 0, 0, 0, 1, 0, 0, 0, 0.256, 0, 0, 0)
+material_override = ExtResource("2_veyq7")
 mesh = SubResource("BoxMesh_bqabr")
 
 [node name="off" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.4638732, 0, 0, 0, 0.3731185, 0.117714174, 0, -0.1441615, 0.30466747, 0, 0.048999473, 0.08299516)
+material_override = ExtResource("2_veyq7")
 mesh = SubResource("BoxMesh_bqabr")
 
 [node name="on" type="MeshInstance3D" parent="."]

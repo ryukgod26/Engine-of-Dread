@@ -1,11 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://blw0jt75nvbgg"]
+[gd_scene load_steps=5 format=3 uid="uid://blw0jt75nvbgg"]
 
 [ext_resource type="PackedScene" uid="uid://crv7rgf6onelx" path="res://assets/Blender/Friidge/eod_fridge.glb" id="1_xiuqv"]
+[ext_resource type="Material" uid="uid://hw2x52vm7x58" path="res://assets/Materials/Metal009_1K-JPG/Metal009_1K-JPG.tres" id="2_csm8p"]
+[ext_resource type="Material" path="res://assets/Materials/Metal038_1K-JPG/Metal038_1K-JPG.tres" id="3_3k4jb"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xiuqv"]
 size = Vector3(2.1992188, 5.0928345, 2.3526611)
 
 [node name="fridge" instance=ExtResource("1_xiuqv")]
+
+[node name="Cube" parent="." index="0"]
+material_override = ExtResource("2_csm8p")
+
+[node name="Cube_001" parent="." index="1"]
+material_override = ExtResource("3_3k4jb")
+
+[node name="Cube_002" parent="." index="2"]
+material_override = ExtResource("3_3k4jb")
+
+[node name="Cube_003" parent="." index="3"]
+material_override = ExtResource("2_csm8p")
+
+[node name="Cube_004" parent="." index="4"]
+material_override = ExtResource("2_csm8p")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="5"]
 
