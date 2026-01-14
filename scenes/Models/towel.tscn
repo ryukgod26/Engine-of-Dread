@@ -1,11 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://bc0up7gog7ksb"]
+[gd_scene load_steps=5 format=3 uid="uid://bc0up7gog7ksb"]
 
 [ext_resource type="PackedScene" uid="uid://ddjrcc4rvki7t" path="res://assets/Blender/Bathroom_Furniture/eod_towel.glb" id="1_jyq2v"]
+[ext_resource type="Material" uid="uid://hw2x52vm7x58" path="res://assets/Materials/Metal009_1K-JPG/Metal009_1K-JPG.tres" id="2_7bloo"]
+[ext_resource type="Material" path="res://assets/Materials/Fabric079_1K-JPG/Fabric079_1K-JPG.tres" id="3_qf1tw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jyq2v"]
 size = Vector3(3.5, 2.4, 3.8)
 
 [node name="towel" instance=ExtResource("1_jyq2v")]
+
+[node name="Cylinder" parent="." index="0"]
+material_override = ExtResource("2_7bloo")
+
+[node name="Cylinder_001" parent="." index="1"]
+material_override = ExtResource("2_7bloo")
+
+[node name="Cylinder_002" parent="." index="2"]
+material_override = ExtResource("2_7bloo")
+
+[node name="Cube" parent="." index="3"]
+material_override = ExtResource("3_qf1tw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." index="4"]
 

@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=4 uid="uid://ccrw4ntwayfcu"]
+[gd_scene load_steps=6 format=4 uid="uid://ccrw4ntwayfcu"]
+
+[ext_resource type="Material" path="res://assets/Materials/WoodFloor069_1K-JPG/WoodFloor069_1K-JPG.tres" id="1_qc2rh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i5hpo"]
 resource_name = "Material"
@@ -48,6 +50,7 @@ data = PackedVector3Array(-1, -1, 1, -1, 1, -1, -1, 1, 1, -1, -1, 1, -1, -1, -1,
 
 [node name="Cube" type="MeshInstance3D" parent="."]
 transform = Transform3D(5.1721554, 0, 0, 0, 4.989068, 0, 0, 0, -2.8980284, 0, 0, 0)
+material_override = ExtResource("1_qc2rh")
 mesh = SubResource("ArrayMesh_6qdr5")
 skeleton = NodePath("")
 metadata/extras = {

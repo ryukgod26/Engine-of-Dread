@@ -1,12 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://v6yg6yocle5q"]
+[gd_scene load_steps=6 format=3 uid="uid://v6yg6yocle5q"]
 
 [ext_resource type="PackedScene" uid="uid://c0h1qvo34funq" path="res://assets/Blender/Bathroom_Furniture/toilet.glb" id="1_gi2so"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gi2so"]
-roughness = 0.3
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a86bb"]
-roughness = 0.3
+[ext_resource type="Material" path="res://assets/Materials/Onyx015_1K-JPG/Onyx015_1K-JPG.tres" id="2_a86bb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2u3h5"]
 albedo_color = Color(0.4045111, 0.40451115, 0.4045111, 1)
@@ -22,19 +17,19 @@ size = Vector3(2.2622375, 5.5144043, 3.2210693)
 [node name="toilet" instance=ExtResource("1_gi2so")]
 
 [node name="Cylinder" parent="." index="0"]
-material_override = SubResource("StandardMaterial3D_gi2so")
+material_override = ExtResource("2_a86bb")
 
 [node name="Cylinder_001" parent="." index="1"]
-material_override = SubResource("StandardMaterial3D_a86bb")
+material_override = ExtResource("2_a86bb")
 
 [node name="Cylinder_002" parent="." index="2"]
-material_override = SubResource("StandardMaterial3D_a86bb")
+material_override = ExtResource("2_a86bb")
 
 [node name="Cube" parent="." index="3"]
-material_override = SubResource("StandardMaterial3D_a86bb")
+material_override = ExtResource("2_a86bb")
 
 [node name="Cylinder_003" parent="." index="4"]
-material_override = SubResource("StandardMaterial3D_a86bb")
+material_override = ExtResource("2_a86bb")
 
 [node name="Cube_001" parent="." index="5"]
 material_override = SubResource("StandardMaterial3D_2u3h5")

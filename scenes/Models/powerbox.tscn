@@ -1,4 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbovud832nwyu"]
+[gd_scene load_steps=4 format=3 uid="uid://cbovud832nwyu"]
+
+[ext_resource type="Material" path="res://assets/Materials/Metal010_1K-JPG/Metal010_1K-JPG.tres" id="1_hjlw0"]
+[ext_resource type="Material" path="res://assets/Materials/Metal017_1K-JPG/Metal017_1K-JPG.tres" id="2_xt485"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_40i2v"]
 
@@ -6,12 +9,15 @@
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.24126196, 0, 0, 0, 1.2700713, 0, 0, 0, 1, 0, 0, 0)
+material_override = ExtResource("1_hjlw0")
 mesh = SubResource("BoxMesh_40i2v")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.2441762, 0, 0, 0, 1.1884085, 0, 0, 0, 0.9130498, 0.055853367, 0, 0)
+material_override = ExtResource("2_xt485")
 mesh = SubResource("BoxMesh_40i2v")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.1425467, 0, 0, 0, 0.3344611, 0, 0, 0, 0.12367823, 0.1878357, 0, -0.29641673)
+transform = Transform3D(0.111587346, 0, 0, 0, 0.3344611, 0, 0, 0, 0.12367823, 0.2148025, 0, -0.29641673)
+material_override = ExtResource("2_xt485")
 mesh = SubResource("BoxMesh_40i2v")

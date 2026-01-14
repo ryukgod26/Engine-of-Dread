@@ -35,6 +35,7 @@ mesh = SubResource("BoxMesh_bqabr")
 [node name="on" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.4638732, 0, 0, 0, 0.37202096, -0.120007895, 0, 0.14697064, 0.3037713, 0, 0.02023924, 0.08078037)
 visible = false
+material_override = ExtResource("2_veyq7")
 mesh = SubResource("BoxMesh_bqabr")
 
 [node name="light_switch_static_body" type="StaticBody3D" parent="." node_paths=PackedStringArray("switch") groups=["interectable"]]

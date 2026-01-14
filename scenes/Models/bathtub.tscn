@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cixvh0cpbo5if"]
+[gd_scene load_steps=7 format=3 uid="uid://cixvh0cpbo5if"]
 
 [ext_resource type="PackedScene" uid="uid://c4s6neyyh5cqr" path="res://assets/Blender/Bathroom_Furniture/eod_bathtub.glb" id="1_qclcd"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qclcd"]
-roughness = 0.3
+[ext_resource type="Material" path="res://assets/Materials/Onyx015_1K-JPG/Onyx015_1K-JPG.tres" id="2_dg8x6"]
+[ext_resource type="Material" uid="uid://hw2x52vm7x58" path="res://assets/Materials/Metal009_1K-JPG/Metal009_1K-JPG.tres" id="3_nqmik"]
+[ext_resource type="Material" path="res://assets/Materials/Metal052C_1K-JPG/Metal052C_1K-JPG.tres" id="3_voqab"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7rn6n"]
 albedo_color = Color(0.92156863, 0, 0, 1)
@@ -14,7 +14,13 @@ albedo_color = Color(0, 0, 0.8392157, 1)
 [node name="bathtub" instance=ExtResource("1_qclcd")]
 
 [node name="Cube" parent="." index="0"]
-material_override = SubResource("StandardMaterial3D_qclcd")
+material_override = ExtResource("2_dg8x6")
+
+[node name="Cube_001" parent="." index="1"]
+material_override = ExtResource("2_dg8x6")
+
+[node name="Cylinder" parent="." index="2"]
+material_override = ExtResource("3_nqmik")
 
 [node name="Cylinder_001" parent="." index="3"]
 material_override = SubResource("StandardMaterial3D_7rn6n")
@@ -22,8 +28,35 @@ material_override = SubResource("StandardMaterial3D_7rn6n")
 [node name="Cylinder_002" parent="." index="4"]
 material_override = SubResource("StandardMaterial3D_dg8x6")
 
+[node name="Cylinder_003" parent="." index="5"]
+material_override = ExtResource("3_voqab")
+
+[node name="Cylinder_004" parent="." index="6"]
+material_override = ExtResource("3_voqab")
+
+[node name="Cylinder_005" parent="." index="7"]
+material_override = ExtResource("3_voqab")
+
+[node name="Cylinder_006" parent="." index="8"]
+material_override = ExtResource("3_voqab")
+
 [node name="Cylinder_007" parent="." index="9"]
 material_override = SubResource("StandardMaterial3D_7rn6n")
 
 [node name="Cylinder_008" parent="." index="10"]
 material_override = SubResource("StandardMaterial3D_dg8x6")
+
+[node name="Cylinder_009" parent="." index="11"]
+material_override = ExtResource("3_voqab")
+
+[node name="Cylinder_010" parent="." index="12"]
+material_override = ExtResource("3_voqab")
+
+[node name="Cylinder_011" parent="." index="13"]
+material_override = ExtResource("3_voqab")
+
+[node name="Cylinder_012" parent="." index="14"]
+material_override = ExtResource("3_voqab")
+
+[node name="Cylinder_013" parent="." index="15"]
+material_override = ExtResource("3_voqab")

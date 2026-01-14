@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://b60o76n5yl0gf"]
 
 [ext_resource type="Script" uid="uid://drsfafk7yaas8" path="res://scripts/Lamp/lamp.gd" id="1_wdeyg"]
-[ext_resource type="Material" path="res://assets/Materials/Wood094_1K-JPG/Wood094_1K-JPG.tres" id="2_3ba3r"]
+[ext_resource type="Material" uid="uid://d1sn3s3xodwet" path="res://assets/Materials/Wood094_1K-JPG/Wood094_1K-JPG.tres" id="2_3ba3r"]
 [ext_resource type="Script" uid="uid://c11x5f7rogk2c" path="res://scripts/Lamp/lamp_static_body.gd" id="2_uhj3a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uhj3a"]

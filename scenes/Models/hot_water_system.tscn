@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://gdf4r0aoloj2"]
+[gd_scene load_steps=7 format=3 uid="uid://gdf4r0aoloj2"]
 
 [ext_resource type="Texture2D" uid="uid://crl3kj68yuk1n" path="res://assets/Paintings/water_pump.png" id="1_o6oq5"]
+[ext_resource type="Material" path="res://assets/Materials/Metal011_1K-JPG/Metal011_1K-JPG.tres" id="1_v4ke5"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_ks5bp"]
 radial_segments = 24
@@ -17,22 +18,27 @@ size = Vector3(1.1782227, 2.225586, 1.2000732)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.2, 0, 0, 0, 0.1, 0, 0, 0, 1.2, 0, 0, 0)
+material_override = ExtResource("1_v4ke5")
 mesh = SubResource("CylinderMesh_ks5bp")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1.2, 0, 0, 0, 0.1, 0, 0, 0, 1.2, 0, 2, 0)
+material_override = ExtResource("1_v4ke5")
 mesh = SubResource("CylinderMesh_ks5bp")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.864, 0, 0, 0, 1, 0, 1, 0)
+material_override = ExtResource("1_v4ke5")
 mesh = SubResource("CylinderMesh_ks5bp")
 
 [node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.08402726, 0, 0, 0, 0.22809514, 0, 0, 0, 0.28241345, -0.5354023, 1, 0)
+material_override = ExtResource("1_v4ke5")
 mesh = SubResource("BoxMesh_o6oq5")
 
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.11207836, 0, 0, 0, -2.8417494e-08, -0.11207836, 0, 0.6501165, -4.899101e-09, -0.509545, 0.986912, -0.7679803)
+material_override = ExtResource("1_v4ke5")
 mesh = SubResource("CylinderMesh_v4ke5")
 
 [node name="Decal" type="Decal" parent="."]
