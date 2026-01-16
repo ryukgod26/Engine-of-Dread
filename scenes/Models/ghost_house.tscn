@@ -559,7 +559,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1.1931744, 0, 8.742278e-08, 0, 
 [node name="Systems" type="Node3D" parent="."]
 
 [node name="hot_water_system" parent="Systems" instance=ExtResource("26_fyoa5")]
-transform = Transform3D(-1.7999997, 0, -1.1920929e-07, 0, 1.8, 0, 1.1920929e-07, 0, -1.7999997, 17.7, -12, 0)
+transform = Transform3D(-1.7999997, 0, -1.1920929e-07, 0, 1.8, 0, 1.1920929e-07, 0, -1.7999997, 17.7, -12.413381, 0)
 
 [node name="powerbox" parent="Systems" instance=ExtResource("27_x6wnh")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.596724, -8.25042, 5.899615)
@@ -704,3 +704,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.2709737, 0, -7.6043453)
 size = Vector3(30.70996, 20, 53.212402)
 ambient_mode = 2
 ambient_color = Color(0.288518, 0.28851798, 0.28851798, 1)
+
+[node name="CodePaperPositions" type="Node3D" parent="."]
+
+[node name="pos1" type="Node3D" parent="CodePaperPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.78734, -0.8463944, -27.13702)
+
+[node name="pos2" type="Node3D" parent="CodePaperPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2647624, -0.8463944, -27.13702)
+
+[node name="pos3" type="Node3D" parent="CodePaperPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.43875, -1.8209506, 8.4777975)
+
+[node name="pos4" type="Node3D" parent="CodePaperPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.43875, -1.8209506, 6.4744387)
+
+[node name="pos5" type="Node3D" parent="CodePaperPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.420628, -10.1135025, -17.24959)
+
+[node name="pos6" type="Node3D" parent="CodePaperPositions"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.768827, -10.1135025, -17.24959)
