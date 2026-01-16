@@ -1,16 +1,21 @@
-[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://d1sn3s3xodwet"]
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://d1sn3s3xodwet"]
 
 [ext_resource type="Texture2D" uid="uid://rv0wji8qqy6x" path="res://assets/Materials/Wood094_1K-JPG/Wood094_1K-JPG_Color.jpg" id="Color"]
 [ext_resource type="Texture2D" uid="uid://b7pbu0jls4s0b" path="res://assets/Materials/Wood094_1K-JPG/Wood094_1K-JPG_Displacement.jpg" id="Displacement"]
-[ext_resource type="Texture2D" uid="uid://buiapccl40ap1" path="res://assets/Materials/Wood094_1K-JPG/Wood094_1K-JPG_NormalGL.jpg" id="NormalGL"]
 [ext_resource type="Texture2D" uid="uid://cack0jcdm7jlr" path="res://assets/Materials/Wood094_1K-JPG/Wood094_1K-JPG_Roughness.jpg" id="Roughness"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_rbuqr"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_f3rwp"]
+noise = SubResource("FastNoiseLite_rbuqr")
+as_normal_map = true
 
 [resource]
 albedo_texture = ExtResource("Color")
 roughness_texture = ExtResource("Roughness")
 roughness_texture_channel = 4
 normal_enabled = true
-normal_texture = ExtResource("NormalGL")
+normal_texture = SubResource("NoiseTexture2D_f3rwp")
 heightmap_enabled = true
 heightmap_scale = 1.0
 heightmap_texture = ExtResource("Displacement")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c6o4tc4q33jlt"]
 
 [ext_resource type="Material" path="res://assets/Materials/Fabric030_1K-JPG/Fabric030_1K-JPG.tres" id="1_234gg"]
-[ext_resource type="Material" path="res://assets/Materials/Fabric079_1K-JPG/Fabric079_1K-JPG.tres" id="1_ibik4"]
+[ext_resource type="Material" uid="uid://c3s70iah034po" path="res://assets/Materials/Fabric079_1K-JPG/Fabric079_1K-JPG.tres" id="1_ibik4"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_doywd"]
 

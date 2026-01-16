@@ -1,10 +1,16 @@
-[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://0yvbx1xqkfhv"]
+[gd_resource type="StandardMaterial3D" load_steps=7 format=3 uid="uid://0yvbx1xqkfhv"]
 
 [ext_resource type="Texture2D" uid="uid://cj0wgrfy0n20f" path="res://assets/Materials/Fabric048_1K-JPG/Fabric048_1K-JPG_AmbientOcclusion.jpg" id="AmbientOcclusion"]
 [ext_resource type="Texture2D" uid="uid://v07kx7s1nuki" path="res://assets/Materials/Fabric048_1K-JPG/Fabric048_1K-JPG_Color.jpg" id="Color"]
 [ext_resource type="Texture2D" uid="uid://b75uw2rykcki0" path="res://assets/Materials/Fabric048_1K-JPG/Fabric048_1K-JPG_Displacement.jpg" id="Displacement"]
-[ext_resource type="Texture2D" uid="uid://dn7o1tarscpw" path="res://assets/Materials/Fabric048_1K-JPG/Fabric048_1K-JPG_NormalGL.jpg" id="NormalGL"]
 [ext_resource type="Texture2D" uid="uid://yx2n3ttku1m2" path="res://assets/Materials/Fabric048_1K-JPG/Fabric048_1K-JPG_Roughness.jpg" id="Roughness"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_okp0g"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_58yfd"]
+noise = SubResource("FastNoiseLite_okp0g")
+invert = true
+as_normal_map = true
 
 [resource]
 albedo_texture = ExtResource("Color")
@@ -12,7 +18,8 @@ roughness = 0.8
 roughness_texture = ExtResource("Roughness")
 roughness_texture_channel = 4
 normal_enabled = true
-normal_texture = ExtResource("NormalGL")
+normal_scale = -2.08
+normal_texture = SubResource("NoiseTexture2D_58yfd")
 ao_enabled = true
 ao_texture = ExtResource("AmbientOcclusion")
 ao_texture_channel = 4

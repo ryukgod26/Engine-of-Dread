@@ -1,15 +1,21 @@
-[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="acg_c69mpf1w"]
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://bflx5rcw04t72"]
 
-[ext_resource type="Texture2D" uid="uid://acg_752e3khc" id="Color" path="./Wood051_1K-JPG_Color.jpg"]
-[ext_resource type="Texture2D" uid="uid://acg_dvm7rpho" id="Displacement" path="./Wood051_1K-JPG_Displacement.jpg"]
-[ext_resource type="Texture2D" uid="uid://acg_aqkt5c2p" id="Roughness" path="./Wood051_1K-JPG_Roughness.jpg"]
-[ext_resource type="Texture2D" uid="uid://acg_et13u8fy" id="NormalGL" path="./Wood051_1K-JPG_NormalGL.jpg"]
+[ext_resource type="Texture2D" uid="uid://blsnetvlykopx" path="res://assets/Materials/Wood051_1K-JPG/Wood051_1K-JPG_Color.jpg" id="Color"]
+[ext_resource type="Texture2D" uid="uid://qg73kb5en0kw" path="res://assets/Materials/Wood051_1K-JPG/Wood051_1K-JPG_Displacement.jpg" id="Displacement"]
+[ext_resource type="Texture2D" uid="uid://d1oyysctfxpxb" path="res://assets/Materials/Wood051_1K-JPG/Wood051_1K-JPG_Roughness.jpg" id="Roughness"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_28qj0"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_2p48w"]
+noise = SubResource("FastNoiseLite_28qj0")
+as_normal_map = true
+
 [resource]
 albedo_texture = ExtResource("Color")
 roughness_texture = ExtResource("Roughness")
 roughness_texture_channel = 4
-normal_texture = ExtResource("NormalGL")
 normal_enabled = true
-heightmap_texture = ExtResource("Displacement")
-heightmap_scale = 1.0
+normal_texture = SubResource("NoiseTexture2D_2p48w")
 heightmap_enabled = true
+heightmap_scale = 1.0
+heightmap_texture = ExtResource("Displacement")
