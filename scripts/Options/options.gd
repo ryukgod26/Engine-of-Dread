@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 @onready var master_volume: HSlider = $TabContainer/Audio/MasterVolume
 @onready var music_volume: HSlider = $TabContainer/Audio/MusicVolume
@@ -29,7 +29,8 @@ func _ready() -> void:
 		
 		_:
 			$TabContainer/Video/WindowType.selected = -1
-			
+	
+	visible = false
 	
 	match DisplayServer.window_get_size():
 		
@@ -95,9 +96,11 @@ func _on_invert_y_axis_toggled(toggled_on: bool) -> void:
 
 #back Button
 func _on_back_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	visible = false
 
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
+		_on_back_pressed()
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		
 		var hovered_control = get_viewport().gui_get_hovered_control()

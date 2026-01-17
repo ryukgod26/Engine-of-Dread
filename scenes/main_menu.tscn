@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://dymg4iggqmdsg"]
+[gd_scene load_steps=11 format=3 uid="uid://dymg4iggqmdsg"]
 
 [ext_resource type="Script" uid="uid://7e8d14tgrswn" path="res://scripts/Main_Menu/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://7l3an0rf0dfj" path="res://assets/Images/main_menu1.png" id="2_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://bio2m26xkfhrv" path="res://assets/Menu/pixel_art_bat/pixel_art_bat/bat_angry.png" id="3_bqqt6"]
+[ext_resource type="PackedScene" uid="uid://chn50skddla50" path="res://scenes/options.tscn" id="4_wu84c"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wu84c"]
 texture = ExtResource("2_ekxnf")
@@ -98,6 +99,8 @@ scale = Vector2(13.199025, -17.33001)
 amount = 50
 texture = ExtResource("3_bqqt6")
 process_material = SubResource("ParticleProcessMaterial_bqqt6")
+
+[node name="Options" parent="." instance=ExtResource("4_wu84c")]
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]

@@ -1,4 +1,5 @@
 extends Node3D
+var dialogue_resource: DialogueResource  =  preload("res://Dialogues/test.dialogue")
 
 @export var door: Node3D
 var times_rung := 0
@@ -14,3 +15,6 @@ func interact():
 			door.locked = false
 			await get_tree().create_timer(3).timeout
 			Globals.UI.add_new_task("Enter The House")
+			DialogueManager.show_dialogue_balloon(dialogue_resource,"s
+			tart")
+			

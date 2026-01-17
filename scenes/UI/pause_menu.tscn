@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cv5xi7fi6c38e"]
+[gd_scene load_steps=3 format=3 uid="uid://cv5xi7fi6c38e"]
 
 [ext_resource type="Script" uid="uid://de3an1j243yqc" path="res://scripts/UI/pause_menu.gd" id="1_qo2fb"]
+[ext_resource type="PackedScene" uid="uid://chn50skddla50" path="res://scenes/options.tscn" id="2_bl585"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 process_mode = 3
@@ -49,6 +50,8 @@ text = "Main Menu"
 layout_mode = 2
 size_flags_vertical = 3
 text = "Quit"
+
+[node name="Options" parent="." instance=ExtResource("2_bl585")]
 
 [connection signal="pressed" from="ButtonsContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="ButtonsContainer/Settings" to="." method="_on_settings_pressed"]
