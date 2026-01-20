@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=4 uid="uid://t3ofn6wr10k1"]
+[gd_scene load_steps=61 format=4 uid="uid://t3ofn6wr10k1"]
 
 [ext_resource type="Material" uid="uid://cka6k5i0yj0u7" path="res://assets/Materials/PaintedPlaster011_1K-JPG/PaintedPlaster011_1K-JPG.tres" id="1_abkcx"]
 [ext_resource type="Material" uid="uid://hbw6k1txkboa" path="res://assets/Materials/WoodFloor013_1K-JPG/WoodFloor013_1K-JPG.tres" id="3_tld6b"]
@@ -34,6 +34,7 @@
 [ext_resource type="PackedScene" uid="uid://c05je1aow1ykf" path="res://scenes/Models/blood_decal.tscn" id="31_w3d8j"]
 [ext_resource type="PackedScene" uid="uid://cbfrk0mdrwnq5" path="res://scenes/Models/locker.tscn" id="32_hialo"]
 [ext_resource type="PackedScene" uid="uid://v8obesdrhybc" path="res://scenes/Models/house_number.tscn" id="33_rvaeu"]
+[ext_resource type="PackedScene" uid="uid://b3wvb4rg5mj76" path="res://scenes/Models/password_paper.tscn" id="35_tld6b"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dykbe"]
 
@@ -314,13 +315,13 @@ transform = Transform3D(-2.6882502e-08, 0, -0.61499995, 0, 0.6149999, 0, 0.61499
 [node name="Drawers" type="Node3D" parent="."]
 
 [node name="ghost_drawer2" parent="Drawers" instance=ExtResource("7_oh1pv")]
-transform = Transform3D(0.5171247, 0, 1.2040259e-09, 0, 0.51712483, 0, -1.2040259e-09, 0, 0.5171247, -16.367815, -1.9586575, 7.299438)
+transform = Transform3D(0.7, 0, 1.6298158e-09, 0, 0.7, 0, -1.6298158e-09, 0, 0.7, -16.367815, -1.9586575, 7.299438)
 
 [node name="ghost_drawer3" parent="Drawers" instance=ExtResource("7_oh1pv")]
-transform = Transform3D(-4.3711342e-08, 0, -0.9999989, 0, 0.9999993, 0, 0.9999989, 0, -4.3711342e-08, -8.10401, -1.1711345, -27.08259)
+transform = Transform3D(-3.059797e-08, 0, -0.7, 0, 0.7, 0, 0.7, 0, -3.059797e-08, -8.10401, -1.5616765, -27.08259)
 
 [node name="ghost_drawer4" parent="Drawers" instance=ExtResource("7_oh1pv")]
-transform = Transform3D(-4.3711342e-08, 0, -0.7999992, 0, 0.9999993, 0, 0.9999989, 0, -3.4969073e-08, -12.10401, -10.357067, -17.38259)
+transform = Transform3D(-3.059797e-08, 0, -0.56, 0, 0.7, 0, 0.7, 0, -2.4478377e-08, -12.10401, -11.025996, -17.20078)
 
 [node name="Paintings" type="Node3D" parent="."]
 
@@ -334,10 +335,10 @@ transform = Transform3D(-1.4255898, 0, -1.1424212e-07, 0, 1.1308813, 0, 1.248023
 [node name="Televisions" type="Node3D" parent="."]
 
 [node name="ghost_television" parent="Televisions" instance=ExtResource("11_api4n")]
-transform = Transform3D(-0.9999991, 0, -8.74227e-08, 0, 0.99999934, 0, 8.74227e-08, 0, -0.9999991, -8.774958, 0.88182306, -26.899101)
+transform = Transform3D(-0.9999991, 0, -8.74227e-08, 0, 0.99999934, 0, 8.74227e-08, 0, -0.9999991, -8.774958, 0.36511326, -26.899101)
 
 [node name="ghost_television2" parent="Televisions" instance=ExtResource("11_api4n")]
-transform = Transform3D(-0.9999991, 0, -8.74227e-08, 0, 0.99999934, 0, 8.74227e-08, 0, -0.9999991, -12.774958, -8.118177, -17.1991)
+transform = Transform3D(-0.9999991, 0, -8.74227e-08, 0, 0.99999934, 0, 8.74227e-08, 0, -0.9999991, -12.774958, -9.172152, -17.1991)
 
 [node name="Couch" parent="." instance=ExtResource("12_rs5o4")]
 transform = Transform3D(1.2715439, 0, 0, 0, 1.2715439, 0, 0, 0, 1.2715439, -8.462585, -1.8297415, -1.1410595)
@@ -509,7 +510,7 @@ light_bulb = NodePath("../../Light_Bulbs/light_bulb6")
 [node name="Lamps" type="Node3D" parent="."]
 
 [node name="lamp" parent="Lamps" instance=ExtResource("19_cgqv1")]
-transform = Transform3D(0.8096375, 0, 0, 0, 0.8096375, 0, 0, 0, 0.8096375, -16.038692, 0.21548241, 7.0334773)
+transform = Transform3D(0.8096375, 0, 0, 0, 0.8096375, 0, 0, 0, 0.8096375, -16.038692, 0.44530672, 7.0334773)
 
 [node name="Toilets" type="Node3D" parent="."]
 
@@ -671,7 +672,7 @@ transform = Transform3D(1.0000001, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000001, -9.75
 transform = Transform3D(1.016599, 0.0013173997, -0.060873345, -3.7218356e-10, 2.9256797, 0.0154250525, 0.042892553, -0.031223811, 1.4427633, -17.707563, -11.078289, 20.295267)
 
 [node name="crate8" parent="Crates" instance=ExtResource("29_xpxju")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.639435, 0.388736, -26.72661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.1769676, -0.1279738, -26.72661)
 
 [node name="BloodDecals" type="Node3D" parent="."]
 
@@ -724,3 +725,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.420628, -10.1135025, -17.
 
 [node name="pos6" type="Node3D" parent="CodePaperPositions"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.768827, -10.1135025, -17.24959)
+
+[node name="CodePaper" type="Node3D" parent="."]
+
+[node name="password_paper" parent="CodePaper" node_paths=PackedStringArray("positions") instance=ExtResource("35_tld6b")]
+positions = [NodePath("../../CodePaperPositions/pos1"), NodePath("../../CodePaperPositions/pos2"), NodePath("../../CodePaperPositions/pos3"), NodePath("../../CodePaperPositions/pos4"), NodePath("../../CodePaperPositions/pos5"), NodePath("../../CodePaperPositions/pos6")]

@@ -3,7 +3,7 @@ extends Node3D
 var opened := false
 var locked = false
 
-func  interact():
+func interact():
 	if $AnimationPlayer.current_animation != "open" and not locked:
 		opened = !opened
 		if !opened:

@@ -15,6 +15,5 @@ func interact():
 			door.locked = false
 			await get_tree().create_timer(3).timeout
 			Globals.UI.add_new_task("Enter The House")
-			DialogueManager.show_dialogue_balloon(dialogue_resource,"s
-			tart")
+			DialogueManager.show_dialogue_balloon(dialogue_resource,"start")
 			

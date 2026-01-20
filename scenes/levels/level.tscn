@@ -55,7 +55,7 @@ shadow_enabled = true
 environment = SubResource("Environment_xb4v1")
 
 [node name="player" parent="." instance=ExtResource("1_bovvr")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.6268215, 2.1226182, -3.2022939)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6268215, 2.1226182, -3.2022939)
 
 [node name="floor" type="StaticBody3D" parent="."]
 

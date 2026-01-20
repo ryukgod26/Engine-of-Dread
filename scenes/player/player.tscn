@@ -7,8 +7,10 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 radius = 0.3
+height = 3.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3vyb7"]
+height = 3.0
 
 [node name="player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_8afob")
@@ -20,7 +22,7 @@ shape = SubResource("CapsuleShape3D_u8vuu")
 mesh = SubResource("CapsuleMesh_3vyb7")
 
 [node name="head" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.692, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1957903, 0)
 script = ExtResource("2_dovo2")
 
 [node name="Camera3D" type="Camera3D" parent="head"]
