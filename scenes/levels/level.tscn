@@ -1,6 +1,5 @@
-[gd_scene load_steps=15 format=3 uid="uid://drdl4wbx6falg"]
+[gd_scene load_steps=16 format=3 uid="uid://drdl4wbx6falg"]
 
-[ext_resource type="Texture2D" uid="uid://5lfan064dcru" path="res://assets/floor/close-up-concrete-wall-with-crack.jpg" id="1_377w7"]
 [ext_resource type="PackedScene" uid="uid://duim56isk7074" path="res://scenes/player/player.tscn" id="1_bovvr"]
 [ext_resource type="PackedScene" uid="uid://liicmwhiq8ih" path="res://scenes/house.tscn" id="3_b2cq8"]
 [ext_resource type="PackedScene" uid="uid://crsjb6egbxngf" path="res://scenes/Models/task_trigger.tscn" id="5_d4w6o"]
@@ -35,15 +34,17 @@ reflected_light_source = 2
 tonemap_mode = 3
 glow_enabled = true
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_ftxyw"]
-size = Vector3(15, 0.1, 15)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bovvr"]
-albedo_texture = ExtResource("1_377w7")
-uv1_scale = Vector3(3, 2, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mbbpy"]
+albedo_color = Color(0, 1, 0.09411765, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ftxyw"]
-material = SubResource("StandardMaterial3D_bovvr")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xb4v1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_urvlt"]
+size = Vector3(0.9473877, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d4w6o"]
 
 [node name="level" type="Node3D"]
 
@@ -58,13 +59,40 @@ environment = SubResource("Environment_xb4v1")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6268215, 2.1226182, -3.2022939)
 
 [node name="floor" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
-shape = SubResource("BoxShape3D_ftxyw")
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 76.114525, 0, 5.268879)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
-transform = Transform3D(14.999155, 0, 0.15917104, 0, 0.1, 0, -0.15917104, 0, 14.999155, 0, 0, 0)
+transform = Transform3D(30.954256, 0, 0.16082646, 0, 0.5, 0, -0.32848665, 0, 15.155147, -16.955, -0.194, -14.748)
+material_override = SubResource("StandardMaterial3D_mbbpy")
 mesh = SubResource("BoxMesh_ftxyw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(30.956, 0, 0, 0, 0.5, 0, 0, 0, 15.156, -16.955, -0.194, -14.748)
+shape = SubResource("BoxShape3D_xb4v1")
+
+[node name="floor2" type="StaticBody3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 36.54862, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor2"]
+transform = Transform3D(14.793166, 0, 0.099619895, 0, 0.5, 0, -0.15698518, 0, 9.387471, -1.090889, -0.19416551, -1.6239754)
+material_override = SubResource("StandardMaterial3D_mbbpy")
+mesh = SubResource("BoxMesh_ftxyw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor2"]
+transform = Transform3D(14.793999, 0, 0, 0, 0.5, 0, 0, 0, 9.3880005, -0.38917303, 0, 0)
+shape = SubResource("BoxShape3D_urvlt")
+
+[node name="floor3" type="StaticBody3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 36.54862, 0, 4.282667)
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="floor3"]
+transform = Transform3D(30.954256, 0, 0.16082646, 0, 0.5, 0, -0.32848665, 0, 15.155147, -9.128, -0.194, 9.456)
+material_override = SubResource("StandardMaterial3D_mbbpy")
+mesh = SubResource("BoxMesh_ftxyw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor3"]
+transform = Transform3D(30.956, 0, 0, 0, 0.5, 0, 0, 0, 15.156, -9.228065, 0, 8.451896)
+shape = SubResource("BoxShape3D_d4w6o")
 
 [node name="House" parent="." instance=ExtResource("3_b2cq8")]
 transform = Transform3D(0.45817608, 0, 0, 0, 0.45817608, 0, 0, 0, 0.45817608, 15.489643, 5.7732086, 0.41534853)
