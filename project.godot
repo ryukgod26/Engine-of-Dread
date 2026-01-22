@@ -109,7 +109,7 @@ pause={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialogues/test.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialogues/test.dialogue", "res://Dialogues/Starting.dialogue", "res://Dialogues/no_escape.dialogue", "res://Dialogues/house_enter.dialogue")
 
 [layer_names]
 

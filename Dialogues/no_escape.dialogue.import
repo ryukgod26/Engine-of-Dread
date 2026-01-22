@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dc63mlboofajg"
+path="res://.godot/imported/no_escape.dialogue-83c3b3ece881c0f9cd3efee789142191.tres"
+
+[deps]
+
+source_file="res://Dialogues/no_escape.dialogue"
+dest_files=["res://.godot/imported/no_escape.dialogue-83c3b3ece881c0f9cd3efee789142191.tres"]
+
+[params]
+
+defaults=true

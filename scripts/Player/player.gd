@@ -13,7 +13,7 @@ func _ready() -> void:
 	$head/SpotLight3D.visible = false
 
 func _process(_delta: float) -> void:
-	if not is_multiplayer_authority(): return
+	#if not is_multiplayer_authority(): return
 	if Input.is_action_just_pressed("crouch"):
 		crouching = not crouching
 		if crouching:
@@ -22,7 +22,7 @@ func _process(_delta: float) -> void:
 			SPEED = 3.5
 
 func _physics_process(delta: float) -> void:
-	if not is_multiplayer_authority(): return
+	#if not is_multiplayer_authority(): return
 	if crouching and $CollisionShape3D.shape.height > 0.25:
 		var crouch_height = lerp($CollisionShape3D.shape.height, 0.25, 0.2)
 		$CollisionShape3D.shape.height = crouch_height
