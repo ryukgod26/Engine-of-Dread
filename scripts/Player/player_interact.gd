@@ -2,7 +2,7 @@ extends RayCast3D
 
 @onready var ui: Control = $"../../UI"
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if is_colliding():
 		var collider = get_collider()
 		if collider.is_in_group("interectable") and collider.has_method('interact'):
