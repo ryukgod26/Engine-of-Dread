@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://chn50skddla50"]
+[gd_scene load_steps=12 format=3 uid="uid://chn50skddla50"]
 
 [ext_resource type="Script" uid="uid://dx222jospdr6v" path="res://scripts/Options/options.gd" id="1_4geyq"]
 [ext_resource type="FontFile" uid="uid://bqn7o1mnnp4qx" path="res://assets/fonts/tab_container_title/Orbitron/Orbitron-VariableFont_wght.ttf" id="2_1sggn"]
@@ -11,6 +11,17 @@ bg_color = Color(0.76539606, 0.5486785, 0.34681556, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2iy26"]
 bg_color = Color(0.80721235, 0, 0.20404807, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1sggn"]
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6vpq"]
+bg_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7i7e"]
+bg_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1sggn"]
 
 [node name="Options" type="CanvasLayer"]
 script = ExtResource("1_4geyq")
@@ -87,6 +98,8 @@ horizontal_alignment = 1
 
 [node name="MusicVolume" type="HSlider" parent="TabContainer/Audio"]
 layout_mode = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_kv8mn")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_2iy26")
 script = ExtResource("2_yjkok")
 
 [node name="SFXVolumelbl" type="Label" parent="TabContainer/Audio"]
@@ -96,6 +109,8 @@ horizontal_alignment = 1
 
 [node name="SFXVolume" type="HSlider" parent="TabContainer/Audio"]
 layout_mode = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_kv8mn")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_2iy26")
 script = ExtResource("2_yjkok")
 
 [node name="MuteBtn" type="CheckBox" parent="TabContainer/Audio"]
@@ -113,6 +128,8 @@ horizontal_alignment = 1
 
 [node name="FOV" type="HSlider" parent="TabContainer/Controls"]
 layout_mode = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_kv8mn")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_2iy26")
 min_value = 70.0
 max_value = 110.0
 step = 0.4
@@ -126,6 +143,8 @@ horizontal_alignment = 1
 
 [node name="Senstivity" type="HSlider" parent="TabContainer/Controls"]
 layout_mode = 2
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_kv8mn")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_2iy26")
 min_value = 0.3
 max_value = 3.0
 step = 0.27
@@ -144,6 +163,10 @@ anchor_bottom = 1.0
 offset_top = -31.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1sggn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e6vpq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o7i7e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1sggn")
 text = "BACK"
 
 [node name="ClickSound" type="AudioStreamPlayer" parent="."]

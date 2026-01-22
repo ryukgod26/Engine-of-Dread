@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://hx68qv6jqufc"]
+[gd_scene load_steps=9 format=3 uid="uid://hx68qv6jqufc"]
 
 [ext_resource type="Script" uid="uid://bt5awi2w65p8f" path="res://scripts/Light_Switch/light_switch.gd" id="1_ucciv"]
 [ext_resource type="Script" uid="uid://m5k852vl7pqc" path="res://scripts/Light_Switch/light_switch_static_body.gd" id="2_ejlpe"]
 [ext_resource type="Material" path="res://assets/Materials/Metal017_1K-JPG/Metal017_1K-JPG.tres" id="2_veyq7"]
+[ext_resource type="AudioStream" uid="uid://ngjruj25pbdn" path="res://assets/Sound/light_switch1.wav" id="4_veyq7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ucciv"]
 emission_enabled = true
@@ -45,3 +46,7 @@ switch = NodePath("..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="light_switch_static_body"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.023773193, 0, 0.08026123)
 shape = SubResource("BoxShape3D_ucciv")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_veyq7")
+volume_db = 40.0

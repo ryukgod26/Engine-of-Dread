@@ -24,3 +24,4 @@ func toggle_light():
 		$off.visible = true
 		light_bulb.get_node('light').material_override = off_mat
 	light_bulb.get_node('OmniLight').visible = on
+	$AudioStreamPlayer3D.play()

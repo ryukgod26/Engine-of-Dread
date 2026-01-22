@@ -10,3 +10,4 @@ func interact():
 			$AnimationPlayer.play_backwards("open")
 		else:
 			$AnimationPlayer.play("open")
+			$AudioStreamPlayer3D.play()

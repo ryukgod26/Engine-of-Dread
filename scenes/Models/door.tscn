@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://dp1n7y60ci8al"]
+[gd_scene load_steps=13 format=3 uid="uid://dp1n7y60ci8al"]
 
 [ext_resource type="Script" uid="uid://dtwln8jg3okct" path="res://scripts/Door/door.gd" id="1_mkop7"]
 [ext_resource type="Script" uid="uid://bm51n3mlhgprj" path="res://scripts/Door/door_static_body.gd" id="2_80xhl"]
 [ext_resource type="Material" uid="uid://h0i5jiradwft" path="res://assets/Materials/Wood029_1K-JPG/Wood029_1K-JPG.tres" id="2_y28kw"]
 [ext_resource type="Material" uid="uid://hw2x52vm7x58" path="res://assets/Materials/Metal009_1K-JPG/Metal009_1K-JPG.tres" id="4_ff5hl"]
 [ext_resource type="Material" path="res://assets/Materials/Metal038_1K-JPG/Metal038_1K-JPG.tres" id="5_qexyj"]
+[ext_resource type="AudioStream" uid="uid://blxpx5qk6qtuq" path="res://assets/Sound/door_open1.wav" id="6_qexyj"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_vtrdk"]
 
@@ -78,3 +79,6 @@ skeleton = NodePath("../../..")
 libraries = {
 &"": SubResource("AnimationLibrary_ff5hl")
 }
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_qexyj")

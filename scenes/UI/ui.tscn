@@ -16,6 +16,8 @@ script = ExtResource("1_suays")
 dot_radius = 5.0
 dot_color = Color(1, 0, 0, 1)
 
+[node name="PauseMenu" parent="." instance=ExtResource("2_yb1mt")]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
@@ -30,5 +32,3 @@ grow_vertical = 2
 [node name="TaskUI" parent="." instance=ExtResource("3_41gti")]
 
 [node name="LockerUI" parent="." instance=ExtResource("3_f54a5")]
-
-[node name="PauseMenu" parent="." instance=ExtResource("2_yb1mt")]
