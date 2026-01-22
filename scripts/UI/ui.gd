@@ -35,3 +35,6 @@ func exit_safe():
 func _draw() -> void:
 	if reticle_visible:
 		draw_circle($CanvasLayer/CenterContainer.position,dot_radius,dot_color,true)
+
+func start_game_timer() -> void:
+	$TimerUI.start_game_timer()

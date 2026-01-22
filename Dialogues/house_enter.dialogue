@@ -1,4 +1,5 @@
 ~ start
+do Globals.dialogue_running = true
 Unknown: Welcone Nathan
 Nathan: Wait Who are You and Where are You
 Unknown: I was Just a Traveller like you who died here.
@@ -16,4 +17,6 @@ Unknown: There is a Locker in one of the rooms in basement and There is a Paper 
 Nathan: What is Isnide the Locker and How can that thing Save me from that Unknown Creature.
 Unknown: Locker has a Thing whose name is ******* from which these creatures fear
 Unknown: So If YouWant to Live, Go and Open that Locker before 2 Minutes and You Will be Saved or else you know.
+do Globals.dialogue_running = false
+do Globals.UI.start_game_timer()
 => END

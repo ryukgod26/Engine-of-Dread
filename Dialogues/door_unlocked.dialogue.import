@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cob87qekqwvkx"
+path="res://.godot/imported/door_unlocked.dialogue-65ebdc149035343076c7515eff88f9de.tres"
+
+[deps]
+
+source_file="res://Dialogues/door_unlocked.dialogue"
+dest_files=["res://.godot/imported/door_unlocked.dialogue-65ebdc149035343076c7515eff88f9de.tres"]
+
+[params]
+
+defaults=true

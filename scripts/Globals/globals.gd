@@ -5,3 +5,4 @@ var invert_y_axis: bool = false
 var fov: float = 75. #Range 70 to 110
 var UI
 var locker
+var dialogue_running:bool

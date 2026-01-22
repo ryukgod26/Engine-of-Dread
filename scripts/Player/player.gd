@@ -14,6 +14,7 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	#if not is_multiplayer_authority(): return
+	if Globals.dialogue_running: return
 	if Input.is_action_just_pressed("crouch"):
 		crouching = not crouching
 		if crouching:
@@ -23,6 +24,7 @@ func _process(_delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	#if not is_multiplayer_authority(): return
+	if Globals.dialogue_running: return
 	if crouching and $CollisionShape3D.shape.height > 0.25:
 		var crouch_height = lerp($CollisionShape3D.shape.height, 0.25, 0.2)
 		$CollisionShape3D.shape.height = crouch_height

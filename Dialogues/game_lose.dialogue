@@ -1,0 +1,8 @@
+~ start
+do Globals.dialogue_running = true
+Nathan: No I Lost
+Nathan: Am I Going to Die
+Unknown Creature:Huff
+Nathan: What is this Voice? No.......
+do Globals.dialogue_running = false
+=> END

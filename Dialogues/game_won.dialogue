@@ -1,0 +1,8 @@
+~ start
+do Globals.dialogue_running = true
+Nathan: I Did It
+Nathan: I Won
+Nathan: I am Alive
+Unknwon: This is not over yet [More to come..]
+do Globals.dialogue_running = false
+=> END

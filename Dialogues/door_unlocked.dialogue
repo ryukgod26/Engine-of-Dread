@@ -1,0 +1,7 @@
+~ start
+do Globals.dialogue_running = true
+Nathan: Wait I Think Something Moved.
+Nathan: I Think Door is Open now.
+Nathan: I Should try to Open It.
+do Globals.dialogue_running = false
+=> END

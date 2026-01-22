@@ -1,0 +1,6 @@
+~ start
+do Globals.dialogue_running = true
+Nathan: Why This Door is not  Opeming
+Nathan: I Think I SHould Try to Ring the Bell 3 Times as written
+do Globals.dialogue_running = false
+=> END
