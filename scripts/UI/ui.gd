@@ -37,4 +37,11 @@ func _draw() -> void:
 		draw_circle($CanvasLayer/CenterContainer.position,dot_radius,dot_color,true)
 
 func start_game_timer() -> void:
+	$TimerUI.visible = true
 	$TimerUI.start_game_timer()
+
+func game_won() ->void:
+	pass
+
+func game_lsoe() -> void:
+	pass

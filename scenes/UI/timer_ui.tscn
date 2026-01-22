@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dn0c357fhvcu8"]
+[gd_scene load_steps=3 format=3 uid="uid://dn0c357fhvcu8"]
 
 [ext_resource type="Script" uid="uid://brxcc50ijmwnh" path="res://scripts/UI/timer_ui.gd" id="1_acrx2"]
+[ext_resource type="FontFile" uid="uid://i1cr64kpmgpu" path="res://assets/fonts/Creepster/Creepster-Regular.ttf" id="2_dmdjw"]
 
 [node name="TimerUI" type="CanvasLayer"]
 script = ExtResource("1_acrx2")
@@ -12,11 +13,23 @@ one_shot = true
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_dmdjw")
+theme_override_font_sizes/font_size = 30
 text = "Time Left:"
 
 [node name="Label2" type="Label" parent="."]
-offset_top = 23.0
+offset_top = 33.0
 offset_right = 77.0
-offset_bottom = 46.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.5411765, 0.011764706, 0.011764706, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("2_dmdjw")
+theme_override_font_sizes/font_size = 30
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
