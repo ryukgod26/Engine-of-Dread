@@ -43,5 +43,5 @@ func start_game_timer() -> void:
 func game_won() ->void:
 	pass
 
-func game_lsoe() -> void:
+func game_lose() -> void:
 	pass

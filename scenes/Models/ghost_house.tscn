@@ -430,6 +430,14 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -16.242645, -4.0249186,
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, -17.3, 0, -11)
 light_bulb = NodePath("../../Light_Bulbs/light_bulb3")
 
+[node name="light_switch11" parent="Light_Switches" node_paths=PackedStringArray("light_bulb") instance=ExtResource("18_mmnm8")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -8.990982, -10.033711, 12.555237)
+light_bulb = NodePath("../../Light_Bulbs/light_bulb5")
+
+[node name="light_switch10" parent="Light_Switches" node_paths=PackedStringArray("light_bulb") instance=ExtResource("18_mmnm8")]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, -1.8357601, -0.27025628, -28.130302)
+light_bulb = NodePath("../../Light_Bulbs/light_bulb2")
+
 [node name="light_switch2" parent="Light_Switches" node_paths=PackedStringArray("light_bulb") instance=ExtResource("18_mmnm8")]
 transform = Transform3D(-0.9999999, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.9999999, -4.299999, -1, 0)
 light_bulb = NodePath("../../Light_Bulbs/light_bulb7")
@@ -437,6 +445,10 @@ light_bulb = NodePath("../../Light_Bulbs/light_bulb7")
 [node name="light_switch3" parent="Light_Switches" node_paths=PackedStringArray("light_bulb") instance=ExtResource("18_mmnm8")]
 transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, -7.299999, -1, 15.099999)
 light_bulb = NodePath("../../Light_Bulbs/light_bulb8")
+
+[node name="light_switch9" parent="Light_Switches" node_paths=PackedStringArray("light_bulb") instance=ExtResource("18_mmnm8")]
+transform = Transform3D(-4.3711385e-08, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, -4.3711385e-08, -3.0552225, -1, 24.551281)
+light_bulb = NodePath("../../Light_Bulbs/light_bulb")
 
 [node name="light_switch4" parent="Light_Switches" node_paths=PackedStringArray("light_bulb") instance=ExtResource("18_mmnm8")]
 transform = Transform3D(-0.9999999, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -0.9999999, -7.299999, -1, 14.299999)

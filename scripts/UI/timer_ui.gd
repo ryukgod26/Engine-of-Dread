@@ -20,6 +20,7 @@ func _process(_delta) -> void:
 func _on_timer_timeout():
 	print("Game Over!")
 	label.text = "00:00"
+	Globals.UI.game_lose()
 	get_tree().paused = true
 
 func start_game_timer() -> void:
