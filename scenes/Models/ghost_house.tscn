@@ -660,24 +660,25 @@ ambient_color = Color(0.288518, 0.28851798, 0.28851798, 1)
 [node name="CodePaperPositions" type="Node3D" parent="."]
 
 [node name="pos1" type="Node3D" parent="CodePaperPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.78734, -0.8463944, -27.13702)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.675795, -1.3091795, -27.13702)
 
 [node name="pos2" type="Node3D" parent="CodePaperPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2647624, -0.8463944, -27.13702)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.48946, -1.3743114, -26.88209)
 
 [node name="pos3" type="Node3D" parent="CodePaperPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.43875, -1.8209506, 8.4777975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.43875, -1.7781717, 8.4777975)
 
 [node name="pos4" type="Node3D" parent="CodePaperPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.43875, -1.8209506, 6.4744387)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.43875, -1.8209506, 5.7957997)
 
 [node name="pos5" type="Node3D" parent="CodePaperPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.420628, -10.1135025, -17.24959)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.420628, -10.787189, -17.24959)
 
 [node name="pos6" type="Node3D" parent="CodePaperPositions"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.768827, -10.1135025, -17.24959)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.768827, -10.683036, -17.24959)
 
 [node name="CodePaper" type="Node3D" parent="."]
 
 [node name="password_paper" parent="CodePaper" node_paths=PackedStringArray("positions") instance=ExtResource("35_tld6b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.036, -5.122, 5.042)
 positions = [NodePath("../../CodePaperPositions/pos1"), NodePath("../../CodePaperPositions/pos2"), NodePath("../../CodePaperPositions/pos3"), NodePath("../../CodePaperPositions/pos4"), NodePath("../../CodePaperPositions/pos5"), NodePath("../../CodePaperPositions/pos6")]

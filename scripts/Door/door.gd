@@ -10,4 +10,5 @@ func interact():
 			$AnimationPlayer.play_backwards("open")
 		else:
 			$AnimationPlayer.play("open")
-			$AudioStreamPlayer3D.play()
+			if get_parent().has_node("/$AudioStreamPlayer3D/"):
+				$AudioStreamPlayer3D.play()
