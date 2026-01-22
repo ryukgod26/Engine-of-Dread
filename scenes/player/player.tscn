@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://duim56isk7074"]
+[gd_scene load_steps=8 format=3 uid="uid://duim56isk7074"]
 
 [ext_resource type="Script" uid="uid://cdkt6wutxxaar" path="res://scripts/Player/player.gd" id="1_8afob"]
 [ext_resource type="Script" uid="uid://cxxp325sqxxfe" path="res://scripts/Player/player_head.gd" id="2_dovo2"]
@@ -11,6 +11,14 @@ height = 3.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3vyb7"]
 height = 3.0
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_lvxji"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
 
 [node name="player" type="CharacterBody3D" groups=["Player"]]
 script = ExtResource("1_8afob")
@@ -41,3 +49,6 @@ shadow_enabled = true
 spot_range = 15.0
 
 [node name="UI" parent="." instance=ExtResource("4_lvxji")]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_lvxji")

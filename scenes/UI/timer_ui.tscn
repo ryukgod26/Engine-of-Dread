@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dn0c357fhvcu8"]
+
+[node name="TimerUI" type="CanvasLayer"]
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

@@ -1,10 +1,11 @@
-[gd_scene load_steps=22 format=4 uid="uid://drdl4wbx6falg"]
+[gd_scene load_steps=23 format=4 uid="uid://drdl4wbx6falg"]
 
 [ext_resource type="PackedScene" uid="uid://duim56isk7074" path="res://scenes/player/player.tscn" id="1_bovvr"]
 [ext_resource type="PackedScene" uid="uid://crsjb6egbxngf" path="res://scenes/Models/task_trigger.tscn" id="5_d4w6o"]
 [ext_resource type="PackedScene" uid="uid://t3ofn6wr10k1" path="res://scenes/Models/ghost_house.tscn" id="5_urvlt"]
 [ext_resource type="Shader" uid="uid://bi3o8elbtqoni" path="res://addons/simplegrasstextured/shaders/grass.gdshader" id="6_ouxo3"]
 [ext_resource type="Texture2D" uid="uid://c4ggdp0kg5wjk" path="res://addons/simplegrasstextured/textures/grassbushcc008.png" id="7_icy5c"]
+[ext_resource type="Script" uid="uid://dreawc6e77tex" path="res://scripts/Multiplayer/multiplayer_spawner.gd" id="7_mbbpy"]
 [ext_resource type="Script" uid="uid://2juaclm8gc1n" path="res://addons/simplegrasstextured/grass.gd" id="8_rmjfq"]
 
 [sub_resource type="Gradient" id="Gradient_b2cq8"]
@@ -178,5 +179,10 @@ sgt_tool_shape = {
 }
 metadata/_custom_type_script = "uid://2juaclm8gc1n"
 metadata/SimpleGrassTextured = "2.0.5"
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("uid://duim56isk7074")
+spawn_path = NodePath("..")
+script = ExtResource("7_mbbpy")
 
 [editable path="TaskTriggers/TaskTrigger"]

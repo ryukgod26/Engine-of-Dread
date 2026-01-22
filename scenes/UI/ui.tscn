@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0xgod0vl6673"]
+[gd_scene load_steps=6 format=3 uid="uid://c0xgod0vl6673"]
 
 [ext_resource type="Script" uid="uid://cp108sain2qrv" path="res://scripts/UI/ui.gd" id="1_suays"]
 [ext_resource type="PackedScene" uid="uid://cv5xi7fi6c38e" path="res://scenes/UI/pause_menu.tscn" id="2_yb1mt"]
 [ext_resource type="PackedScene" uid="uid://b5k8d62s6drnd" path="res://scenes/UI/task_ui.tscn" id="3_41gti"]
 [ext_resource type="PackedScene" uid="uid://c6j4j3hmcua5c" path="res://scenes/UI/locker_ui.tscn" id="3_f54a5"]
+[ext_resource type="PackedScene" uid="uid://52ffcoxt0yrc" path="res://scenes/UI/multiplayer_ui.tscn" id="5_7e3k0"]
 
 [node name="UI" type="Control"]
 layout_mode = 3
@@ -32,3 +33,5 @@ grow_vertical = 2
 [node name="TaskUI" parent="." instance=ExtResource("3_41gti")]
 
 [node name="LockerUI" parent="." instance=ExtResource("3_f54a5")]
+
+[node name="MultiplayerUI" parent="." instance=ExtResource("5_7e3k0")]
